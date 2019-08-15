@@ -1,4 +1,5 @@
-import random, math
+import random, math, pygame
+from pygame.locals import *
 
 def generateElements():
     names = {
@@ -21,7 +22,7 @@ def generateElements():
             "available_depots" : []
         },
         "gollingshire" : {
-            "location" : {"x" : int(mapWidth*.95), "y" : int(mapLength*.21)}, 
+            "location" : {"x" : int(mapWidth*.92), "y" : int(mapLength*.81)}, 
             "available_depots" : []
         },
         "spack" : {
@@ -29,7 +30,7 @@ def generateElements():
             "available_depots" : []
         },
         "kingsbury" : {
-            "location" : {"x" : int(mapWidth*.15), "y" : int(mapLength*.14)},
+            "location" : {"x" : int(mapWidth*.95), "y" : int(mapLength*.34)},
             "available_depots" : []
         },
         "diddley" : {
@@ -43,16 +44,34 @@ def generateElements():
         "lount" : {
             "location" : {"x" : int(mapWidth*.55), "y" : int(mapLength*.22)},
             "available_depots" : []
+        },
+        "atherstone" : {
+            "location" : {"x" : int(mapWidth*.80), "y" : int(mapLength*.55)},
+            "available_depots" : []
+        },
+        "chillham" : {
+            "location" : {"x" : int(mapWidth*.60), "y" : int(mapLength*.37)},
+            "available_depots" : []
+        },
+        "kevlan" : {
+            "location" : {"x" : int(mapWidth*.12), "y" : int(mapLength*.90)},
+            "available_depots" : []
+        },
+        "stootlan" : {
+            "location" : {"x" : int(mapWidth*.87), "y" : int(mapLength*.07)},
+            "available_depots" : []
         }
     }
 
 
     depots_list = {}
+    dist = 5
+    numbDeps = 10
     for hub in hubs_list:
-        for dep in range(6):
-            dx, dy = (mapWidth/10), (mapWidth/10)
-            while ((dx**2 + dy**2) > (mapWidth/10)**2) or (hubs_list[hub]['location']['x'] + dx not in range(mapWidth + 1)) or (hubs_list[hub]['location']['y'] + dy not in range(mapLength + 1)):
-                (dx, dy) = (random.randrange(-(mapWidth/10),(mapWidth/10)), random.randrange(-(mapLength/10),(mapLength/10)))
+        for dep in range(1+numbDeps):
+            dx, dy = (mapWidth/dist), (mapLength/dist)
+            while ((dx**2 + dy**2) > (mapWidth/dist)**2) or (hubs_list[hub]['location']['x'] + dx not in range(mapWidth + 1)) or (hubs_list[hub]['location']['y'] + dy not in range(mapLength + 1)):
+                (dx, dy) = (random.randrange(-(mapWidth/dist),(mapWidth/dist)), random.randrange(-(mapLength/dist),(mapLength/dist)))
             depotname = ""
             while depotname not in depots_list:
                 choice = random.choice(range(1,4))
@@ -65,11 +84,16 @@ def generateElements():
                 if choice == 3:
                     depotname = random.choice(names["prefix"]) + random.choice(names["prefix"]) + random.choice(names["suffix"])
                     break
-            depots_list.update({depotname : {"location" : {"x" : hubs_list[hub]['location']['x'] + dx, "y" : hubs_list[hub]['location']['y'] + dy}, "available_hubs" : []}})
+            depots_list.update({
+                depotname : {
+                    "location" : {
+                        "x" : hubs_list[hub]['location']['x'] + dx, 
+                        "y" : hubs_list[hub]['location']['y'] + dy}, 
+                    "available_hubs" : []}})
 
     for depot in depots_list:
         for hub in hubs_list:
-            if (depots_list[depot]["location"]["x"] - hubs_list[hub]['location']['x'])**2 + (depots_list[depot]["location"]["y"] - hubs_list[hub]['location']['y'])**2 <= (mapWidth/10)**2:
+            if (depots_list[depot]["location"]["x"] - hubs_list[hub]['location']['x'])**2 + (depots_list[depot]["location"]["y"] - hubs_list[hub]['location']['y'])**2 <= (mapWidth/dist)**2:
                 depots_list[depot]["available_hubs"].append(hub)
                 hubs_list[hub]["available_depots"].append(depot)
 
@@ -90,6 +114,58 @@ def generateElements():
                 "distance" : 0
             }})
 
+    for con in cons_list:
+        sorter = []
+        for hub in hubs_list:
+            startDepot = cons_list[con]["origin"]
+            Origin = depots_list[startDepot]
+            targetDepot = cons_list[con]["destination"]
+            Destination = depots_list[targetDepot]
+            Hub = hubs_list[hub]
+            distanceToOrigin = (Hub["location"]["x"] - Origin["location"]["x"])**2 + (Hub["location"]["y"] - Origin["location"]["y"])**2
+            distanceToDestination = (Hub["location"]["x"] - Destination["location"]["x"])**2 + (Hub["location"]["y"] - Destination["location"]["y"])**2
+            sorter.append([hub, distanceToOrigin + distanceToDestination])
+        def takeSecond(elem):
+            return elem[1]
+        sorter.sort(key=takeSecond)
+        path = cons_list[con]["path"]
+        for hub in sorter:
+            if hub[0] in Origin["available_hubs"]:
+                path.append(hub[0])
+                sorter.remove(hub)
+                break
+        valid = True
+        while valid:
+            if path[-1] in Destination["available_hubs"]:
+                valid = False
+            else:
+                path.append(sorter[0][0])
+                sorter.remove(sorter[0])
+        # cons_list[con]['distance'] = con["path"][:]
+        # total_distance = cons[:][distance].sum()
+
+    routes = {}
+    for con in cons_list:
+        path = cons_list[con]["path"]
+        for dep in path:
+            if path.index(dep) != (len(path)-1):
+                rt = "{}:{}".format(dep, path[path.index(dep)+1])
+                if (rt not in routes) and ("{}:{}".format(rt.split(":")[1], rt.split(":")[0]) not in routes):
+                    routes.update({rt : 1})
+                else:
+                    if rt in routes:
+                        routes[rt] += 1
+                    else:
+                        rt = "{}:{}".format(rt.split(":")[1], rt.split(":")[0])
+                        routes[rt] += 1
+
+    with open("Routes.txt", "w") as text_file:
+        for rt in routes:
+            print(
+"""{}
+{}
+""".format(rt, routes[rt]), file=text_file)
+
     with open("Hubs.txt", "w") as text_file:
         for hub in hubs_list:
             print(f"Hub Name: {hub}", file=text_file)
@@ -103,54 +179,63 @@ def generateElements():
             print("Depot Location: {}".format(depots_list[depot]["location"]), file=text_file)
             print("Depot Available Hubs: {}".format(depots_list[depot]["available_hubs"]), file=text_file)
             print(f"", file=text_file)
+    
+    with open("Consignments.txt", "w") as text_file:
+        for con in cons_list:
+            print(
+"""
+Consignment ID: {}
+Origin: {}
+Destination: {}
+Path: {}
+""".format(con, cons_list[con]["origin"], cons_list[con]["destination"], cons_list[con]["path"]), file=text_file)
 
-    return hubs_list, depots_list, cons_list
+    return hubs_list, depots_list, cons_list, routes
 
-hubs_list, depots_list, cons_list = generateElements()
+hubs_list, depots_list, cons_list, routes = generateElements()
 
-# TODO generate the optimal paths
+pygame.init()
+screen_width = 800
+screen_height = 800
+scalerMultiple = ((screen_height + screen_width)/(2*100))
+screen = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption("Network Map")
 
-# 1. For origin and destination, make a ranked list of all the hubs, by distance.
-# 2. Then rank them by combined distance from origin and destination.
-# 3. First hub is first in combined rank in available hubs for origin
-# 4. Check if available depots for hub is destination, if so end, else, select next on rankec list
+hubSize = 20
+depotSize = 5
+run = True
 
+routesMax = ["", 0]
+for rt in routes:
+    if routes[rt] > routesMax[1]:
+        routesMax = [rt, routes[rt]]
+
+screen.fill((220, 255, 220))
 
 for con in cons_list:
-    sorter = []
-    for hub in hubs_list:
-        startDepot = cons_list[con]["origin"]
-        Origin = depots_list[startDepot]
-        targetDepot = cons_list[con]["destination"]
-        Destination = depots_list[targetDepot]
-        Hub = hubs_list[hub]
-        distanceToOrigin = (Hub["location"]["x"] - Origin["location"]["x"])**2 + (Hub["location"]["y"] - Origin["location"]["y"])**2
-        distanceToDestination = (Hub["location"]["x"] - Destination["location"]["x"])**2 + (Hub["location"]["y"] - Destination["location"]["y"])**2
-        sorter.append([hub, distanceToOrigin + distanceToDestination])
-    def takeSecond(elem):
-        return elem[1]
-    sorter.sort(key=takeSecond)
-    path = cons_list[con]["path"]
-    for hub in sorter:
-        if hub[0] in Origin["available_hubs"]:
-            path.append(hub[0])
-            sorter.remove(hub)
-            break
-    valid = True
-    while valid:
-        if path[-1] in Destination["available_hubs"]:
-            valid = False
-        else:
-            path.append(sorter[0][0])
-            sorter.remove(sorter[0])
+    for i in range(len(depots_list[cons_list[con]["origin"]]["available_hubs"])):
+        x1 = depots_list[cons_list[con]["origin"]]["location"]["x"]
+        y1 = depots_list[cons_list[con]["origin"]]["location"]["y"]
+        x2 = hubs_list[depots_list[cons_list[con]["origin"]]["available_hubs"][i]]["location"]["x"]
+        y2 = hubs_list[depots_list[cons_list[con]["origin"]]["available_hubs"][i]]["location"]["y"]
 
-with open("Consignments.txt", "w") as text_file:
-    for con in cons_list:
-        print(f"Consignment ID: {con}", file=text_file)
-        print("Origin: {}".format(cons_list[con]["origin"]), file=text_file)
-        print("Destination: {}".format(cons_list[con]["destination"]), file=text_file)
-        print("Path: {}".format(cons_list[con]["path"]), file=text_file)
-        print(f"", file=text_file)
-    
-#     cons_list[con]['distance'].update(con.path[:].sum())
-# total_distance = cons[:][distance].sum()
+        pygame.draw.line(screen, (255, 100, 100), (int(scalerMultiple * (1 + x1)), int(scalerMultiple * (1 + y1))), (int(scalerMultiple * ((hubSize/10) + x2)), int(scalerMultiple * ((hubSize/10) + y2))), 2)
+
+for rt in routes:
+    rt1 = rt.split(":")[0]
+    rt2 = rt.split(":")[1]
+    pygame.draw.line(screen, ((255-int(120*(routes[rt]/routesMax[1]))), (100-int(50*(routes[rt]/routesMax[1]))), (100-int(50*(routes[rt]/routesMax[1])))), (int(scalerMultiple * ((hubSize/10) + hubs_list[rt1]["location"]["x"])), int(scalerMultiple * ((hubSize/10) + hubs_list[rt1]["location"]["y"]))), (int(scalerMultiple * ((hubSize/10) + hubs_list[rt2]["location"]["x"])), int(scalerMultiple * ((hubSize/10) + hubs_list[rt2]["location"]["y"]))), int(20*(routes[rt]/routesMax[1])))
+
+for hub in hubs_list:
+    pygame.draw.rect(screen, (50, 150, 252), (int(scalerMultiple * (1 + hubs_list[hub]["location"]["x"])), int(scalerMultiple * (1 + hubs_list[hub]["location"]["y"])), hubSize, hubSize))
+
+for depot in depots_list:
+    pygame.draw.circle(screen, (0, 0, 255), (int(scalerMultiple * (1 + depots_list[depot]["location"]["x"])), int(scalerMultiple * (1 + depots_list[depot]["location"]["y"]))), depotSize)
+
+pygame.display.update()
+
+while run:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+pygame.quit()
