@@ -204,15 +204,16 @@ Path: {}
 hubs_list, depots_list, cons_list, routes = generateElements()
 
 pygame.init()
-f = pygame.font.SysFont(None,10)
-screen_width = 800
-screen_height = 800
+f = pygame.font.SysFont(None,20)
+screen_width = 600
+screen_height = 600
 scalerMultiple = ((screen_height + screen_width)/(2*100))
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Network Map")
 
 hubSize = 20
 depotSize = 5
+landSize = 60
 run = True
 
 routesMax = ["", 0]
@@ -223,7 +224,7 @@ for rt in routes:
 screen.fill((125, 175, 245)) # Light-Blue water colour for the background
 
 ukMap = [
-    [20, 10], [20, 10], 
+    [20, 10], [30, 10], 
     [20, 20], [30, 20], 
     [20, 30], [30, 30], 
     [20, 40], [30, 40], 
@@ -234,7 +235,7 @@ ukMap = [
     [10, 90], [20, 90], [30, 90], [40, 90]
 ]
 for block in ukMap:
-    pygame.draw.rect(screen, (185, 235, 170), (block[0], block[1]), 10, 10)
+    pygame.draw.rect(screen, (185, 235, 170), (int(scalerMultiple * (block[0])), int(scalerMultiple * (block[1])), landSize, landSize))
 
 for con in cons_list:
     for i in range(len(depots_list[cons_list[con]["origin"]]["available_hubs"])):
@@ -243,7 +244,7 @@ for con in cons_list:
         x2 = hubs_list[depots_list[cons_list[con]["origin"]]["available_hubs"][i]]["location"]["x"]
         y2 = hubs_list[depots_list[cons_list[con]["origin"]]["available_hubs"][i]]["location"]["y"]
 
-        pygame.draw.line(screen, (255, 100, 100), (int(scalerMultiple * (1 + x1)), int(scalerMultiple * (1 + y1))), (int(scalerMultiple * ((hubSize/10) + x2)), int(scalerMultiple * ((hubSize/10) + y2))), 2)
+        pygame.draw.line(screen, (230, 255, 100), (int(scalerMultiple * (1 + x1)), int(scalerMultiple * (1 + y1))), (int(scalerMultiple * ((hubSize/10) + x2)), int(scalerMultiple * ((hubSize/10) + y2))), 2)
 
 for rt in routes:
     rt1 = rt.split(":")[0]
@@ -252,13 +253,13 @@ for rt in routes:
     hub1y = hubs_list[rt1]["location"]["y"]
     hub2x = hubs_list[rt2]["location"]["x"]
     hub2y = hubs_list[rt2]["location"]["y"]
-    pygame.draw.line(screen, ((255-int(120*(routes[rt]/routesMax[1]))), (100-int(50*(routes[rt]/routesMax[1]))), (100-int(50*(routes[rt]/routesMax[1])))), (int(scalerMultiple * ((hubSize/10) + hub1x)), int(scalerMultiple * ((hubSize/10) + hub1y))), (int(scalerMultiple * ((hubSize/10) + hub2x)), int(scalerMultiple * ((hubSize/10) + hub2y))), int(20*(routes[rt]/routesMax[1])))
+    pygame.draw.line(screen, (230, (140-int(100*(routes[rt]/routesMax[1]))), 255), (int(scalerMultiple * ((hubSize/10) + hub1x)), int(scalerMultiple * ((hubSize/10) + hub1y))), (int(scalerMultiple * ((hubSize/10) + hub2x)), int(scalerMultiple * ((hubSize/10) + hub2y))), int(20*(routes[rt]/routesMax[1])))
 
 for hub in hubs_list:
     hubx = hubs_list[hub]["location"]["x"]
     huby = hubs_list[hub]["location"]["y"]
-    textsurface = f.render(hubs_list[hub], True, [0, 0, 0], [255, 255, 255])
-    screen.blit(textsurface, (int(scalerMultiple * (1 + hubx)), int(scalerMultiple * (huby))))
+    textsurface = f.render(str(hub), True, [0, 0, 0], [255, 255, 255])
+    screen.blit(textsurface, (int(scalerMultiple * (1 + hubx)), int(scalerMultiple * (huby - 1))))
     pygame.draw.rect(screen, (50, 150, 252), (int(scalerMultiple * (1 + hubx)), int(scalerMultiple * (1 + huby)), hubSize, hubSize))
 
 for depot in depots_list:
