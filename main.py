@@ -18,47 +18,47 @@ def generateElements():
 
     hubs_list = {
         "carley" : {
-            "location" : {"x" : int(mapWidth*.42), "y" : int(mapLength*.73)}, 
+            "location" : {"x" : int(mapWidth*.36), "y" : int(mapLength*.28)}, 
             "available_depots" : []
         },
         "gollingshire" : {
-            "location" : {"x" : int(mapWidth*.92), "y" : int(mapLength*.81)}, 
+            "location" : {"x" : int(mapWidth*.29), "y" : int(mapLength*.30)}, 
             "available_depots" : []
         },
         "spack" : {
-            "location" : {"x" : int(mapWidth*.10), "y" : int(mapLength*.11)}, 
+            "location" : {"x" : int(mapWidth*.38), "y" : int(mapLength*.53)}, 
             "available_depots" : []
         },
         "kingsbury" : {
-            "location" : {"x" : int(mapWidth*.95), "y" : int(mapLength*.34)},
+            "location" : {"x" : int(mapWidth*.32), "y" : int(mapLength*.67)},
             "available_depots" : []
         },
         "diddley" : {
-            "location" : {"x" : int(mapWidth*.24), "y" : int(mapLength*.5)},
+            "location" : {"x" : int(mapWidth*.32), "y" : int(mapLength*.80)},
             "available_depots" : []
         },
         "tuddle" : {
-            "location" : {"x" : int(mapWidth*.7), "y" : int(mapLength*.80)},
+            "location" : {"x" : int(mapWidth*.53), "y" : int(mapLength*.80)},
             "available_depots" : []
         },
         "lount" : {
-            "location" : {"x" : int(mapWidth*.55), "y" : int(mapLength*.22)},
+            "location" : {"x" : int(mapWidth*.25), "y" : int(mapLength*.82)},
             "available_depots" : []
         },
         "atherstone" : {
-            "location" : {"x" : int(mapWidth*.80), "y" : int(mapLength*.55)},
+            "location" : {"x" : int(mapWidth*.28), "y" : int(mapLength*.90)},
             "available_depots" : []
         },
         "chillham" : {
-            "location" : {"x" : int(mapWidth*.60), "y" : int(mapLength*.37)},
+            "location" : {"x" : int(mapWidth*.45), "y" : int(mapLength*.89)},
             "available_depots" : []
         },
         "kevlan" : {
-            "location" : {"x" : int(mapWidth*.12), "y" : int(mapLength*.90)},
+            "location" : {"x" : int(mapWidth*.36), "y" : int(mapLength*.93)},
             "available_depots" : []
         },
         "stootlan" : {
-            "location" : {"x" : int(mapWidth*.87), "y" : int(mapLength*.07)},
+            "location" : {"x" : int(mapWidth*.42), "y" : int(mapLength*.70)},
             "available_depots" : []
         }
     }
