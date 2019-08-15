@@ -69,10 +69,11 @@ def generateElements():
 
     # The depots are generated dynamically using the following code block
     depots_list = {}
-    dist = 5 # This is the divisor that determines how far away the depots can be from the hubs they want to send consignments to (fraction of map's size)
-    numbDeps = 10 # How many depots should be generated per Hub
+    dist = 10 # This is the divisor that determines how far away the depots can be from the hubs they want to send consignments to (fraction of map's size)
+    numbDeps = 5 # How many depots should be generated per Hub
     for hub in hubs_list:
-        for dep in range(1+numbDeps):
+        # if hub == "gollingshire" or hub == "tuddle":
+        for dep in range(numbDeps):
             dx, dy = (mapWidth/dist), (mapLength/dist) # dx and dy are by how much the hub's coordinates are changed by to determine the new depot's x and y coordinates resepectively
             while ((dx**2 + dy**2) > (mapWidth/dist)**2) or (hubs_list[hub]['location']['x'] + dx not in range(mapWidth + 1)) or (hubs_list[hub]['location']['y'] + dy not in range(mapLength + 1)):
                 # loop keeps trying different dx and dy values until the new depot location is both inside the map and within delivery range of the hub
@@ -106,7 +107,7 @@ def generateElements():
 
     num_cons = 100*len(depots_list) # generates a number of consignments per each depot
     cons_list = {}
-    for i in range(num_cons+1):
+    for i in range(num_cons):
         while True:
             # loop picks a random start and end point for the consignment
             origin = random.choice([*depots_list])
@@ -124,6 +125,8 @@ def generateElements():
 
     for con in cons_list:
         sorter = []
+        sorterOrigin = []
+        sorterDestination = []
         for hub in hubs_list:
             # loop calculates the combined distance of a given hub to both the origin and destination of a consignment and records it
             startDepot = cons_list[con]["origin"]
@@ -131,26 +134,59 @@ def generateElements():
             targetDepot = cons_list[con]["destination"]
             Destination = depots_list[targetDepot]
             Hub = hubs_list[hub]
-            distanceToOrigin = (Hub["location"]["x"] - Origin["location"]["x"])**2 + (Hub["location"]["y"] - Origin["location"]["y"])**2
-            distanceToDestination = (Hub["location"]["x"] - Destination["location"]["x"])**2 + (Hub["location"]["y"] - Destination["location"]["y"])**2
+            distanceToOrigin = ((Hub["location"]["x"] - Origin["location"]["x"]) + (Hub["location"]["y"] - Origin["location"]["y"]))**2
+            distanceToDestination = ((Hub["location"]["x"] - Destination["location"]["x"]) + (Hub["location"]["y"] - Destination["location"]["y"]))**2
             sorter.append([hub, distanceToOrigin + distanceToDestination])
+            sorterOrigin.append([hub, distanceToOrigin])
+            sorterDestination.append([hub, distanceToDestination])
         def takeSecond(elem):
             return elem[1]
         sorter.sort(key=takeSecond) # ranks the hubs by their combined distances from both origin and destination, this gives the preferred path as the straightest line  of hubs between the two points
+        sorterOrigin.sort(key=takeSecond)
+        sorterOriginDict = {}
+        for i in sorterOrigin:
+            sorterOriginDict.update({i[0] : i[1]})
+        sorterDestination.sort(key=takeSecond)
+        sorterDestinationDict = {}
+        for i in sorterDestination:
+            sorterDestinationDict.update({i[0] : i[1]})
         path = cons_list[con]["path"]
         for hub in sorter:
             if hub[0] in Origin["available_hubs"]:
                 path.append(hub[0])
+                distFrmOrg = sorterOriginDict[hub[0]]
+                distFrmDst = sorterDestinationDict[hub[0]]
+                cons_list[con]['distance'] += distFrmOrg
+                sorterOriginDict.pop(hub[0])
+                sorterDestinationDict.pop(hub[0])
                 sorter.remove(hub)
                 break
         valid = True
         while valid:
             if path[-1] in Destination["available_hubs"]:
+                cons_list[con]['distance'] += distFrmDst
                 valid = False
+            elif (sorterOriginDict[sorter[0][0]] >= distFrmOrg) and (sorterDestinationDict[sorter[0][0]] <= distFrmDst):
+                path.append(sorter[0][0])
+                distFrmOrg = sorterOriginDict[sorter[0][0]]
+                distFrmDst = sorterDestinationDict[sorter[0][0]]
+                sorterOriginDict.pop(sorter[0][0])
+                sorterDestinationDict.pop(sorter[0][0])
+                sorter.remove(sorter[0])
+            elif (sorterOriginDict[sorter[0][0]] >= distFrmOrg):
+                path.append(sorter[0][0])
+                distFrmOrg = sorterOriginDict[sorter[0][0]]
+                distFrmDst = sorterDestinationDict[sorter[0][0]]
+                sorterOriginDict.pop(sorter[0][0])
+                sorterDestinationDict.pop(sorter[0][0])
+                sorter.remove(sorter[0])
             else:
                 path.append(sorter[0][0])
+                distFrmOrg = sorterOriginDict[sorter[0][0]]
+                distFrmDst = sorterDestinationDict[sorter[0][0]]
+                sorterOriginDict.pop(sorter[0][0])
+                sorterDestinationDict.pop(sorter[0][0])
                 sorter.remove(sorter[0])
-        # cons_list[con]['distance'] = con["path"][:]
         # total_distance = cons[:][distance].sum()
 
     routes = {}
@@ -197,7 +233,8 @@ Consignment ID: {}
 Origin: {}
 Destination: {}
 Path: {}
-""".format(con, cons_list[con]["origin"], cons_list[con]["destination"], cons_list[con]["path"]), file=text_file)
+Distance: {}
+""".format(con, cons_list[con]["origin"], cons_list[con]["destination"], cons_list[con]["path"], cons_list[con]["distance"]), file=text_file)
 
     return hubs_list, depots_list, cons_list, routes
 
@@ -205,15 +242,15 @@ hubs_list, depots_list, cons_list, routes = generateElements()
 
 pygame.init()
 f = pygame.font.SysFont(None,20)
-screen_width = 600
-screen_height = 600
+screen_width = 800
+screen_height = 800
 scalerMultiple = ((screen_height + screen_width)/(2*100))
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Network Map")
 
 hubSize = 20
 depotSize = 5
-landSize = 60
+landSize = 90
 run = True
 
 routesMax = ["", 0]
