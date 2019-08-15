@@ -2,6 +2,8 @@ import random, math, pygame
 from pygame.locals import *
 
 def generateElements():
+    
+    # I used this dictionary of english-sounding words / syllables to generate the names of the depots
     names = {
             "prefix" : [
                 "abing", "aber", "bark", "berry", "chelms", "car", "wood","strem", "ling", "spack",
@@ -12,10 +14,12 @@ def generateElements():
                 "shire", "ton", "don", "ford", "cester", "ley", "e"
             ]
     }
-
+    
+    # The mapWidth / Length sets the aspect ratio of the map; can make it thinner or wider using these variables
     mapWidth = 100
     mapLength = 100
-
+    
+    # I defined the hubs names and locations manuallly because I wanted to place them relative to where the population centres of the UK are
     hubs_list = {
         "carley" : {
             "location" : {"x" : int(mapWidth*.36), "y" : int(mapLength*.28)}, 
@@ -63,17 +67,19 @@ def generateElements():
         }
     }
 
-
+    # The depots are generated dynamically using the following code block
     depots_list = {}
-    dist = 5
-    numbDeps = 10
+    dist = 5 # This is the divisor that determines how far away the depots can be from the hubs they want to send consignments to (fraction of map's size)
+    numbDeps = 10 # How many depots should be generated per Hub
     for hub in hubs_list:
         for dep in range(1+numbDeps):
-            dx, dy = (mapWidth/dist), (mapLength/dist)
+            dx, dy = (mapWidth/dist), (mapLength/dist) # dx and dy are by how much the hub's coordinates are changed by to determine the new depot's x and y coordinates resepectively
             while ((dx**2 + dy**2) > (mapWidth/dist)**2) or (hubs_list[hub]['location']['x'] + dx not in range(mapWidth + 1)) or (hubs_list[hub]['location']['y'] + dy not in range(mapLength + 1)):
+                # loop keeps trying different dx and dy values until the new depot location is both inside the map and within delivery range of the hub
                 (dx, dy) = (random.randrange(-(mapWidth/dist),(mapWidth/dist)), random.randrange(-(mapLength/dist),(mapLength/dist)))
             depotname = ""
             while depotname not in depots_list:
+                # loop makes a unique name using the words in the names dictionary
                 choice = random.choice(range(1,4))
                 if choice == 1:
                     depotname = random.choice(names["prefix"])
@@ -93,14 +99,16 @@ def generateElements():
 
     for depot in depots_list:
         for hub in hubs_list:
+            # loop goes through every depot and attaches its available hubs, concurrently adding available depots to each hub
             if (depots_list[depot]["location"]["x"] - hubs_list[hub]['location']['x'])**2 + (depots_list[depot]["location"]["y"] - hubs_list[hub]['location']['y'])**2 <= (mapWidth/dist)**2:
                 depots_list[depot]["available_hubs"].append(hub)
                 hubs_list[hub]["available_depots"].append(depot)
 
-    num_cons = 100*len(depots_list)
+    num_cons = 100*len(depots_list) # generates a number of consignments per each depot
     cons_list = {}
     for i in range(num_cons+1):
         while True:
+            # loop picks a random start and end point for the consignment
             origin = random.choice([*depots_list])
             destination = random.choice([*depots_list])
             if origin != destination:
@@ -117,6 +125,7 @@ def generateElements():
     for con in cons_list:
         sorter = []
         for hub in hubs_list:
+            # loop calculates the combined distance of a given hub to both the origin and destination of a consignment and records it
             startDepot = cons_list[con]["origin"]
             Origin = depots_list[startDepot]
             targetDepot = cons_list[con]["destination"]
@@ -127,7 +136,7 @@ def generateElements():
             sorter.append([hub, distanceToOrigin + distanceToDestination])
         def takeSecond(elem):
             return elem[1]
-        sorter.sort(key=takeSecond)
+        sorter.sort(key=takeSecond) # ranks the hubs by their combined distances from both origin and destination, this gives the preferred path as the straightest line  of hubs between the two points
         path = cons_list[con]["path"]
         for hub in sorter:
             if hub[0] in Origin["available_hubs"]:
