@@ -204,6 +204,7 @@ Path: {}
 hubs_list, depots_list, cons_list, routes = generateElements()
 
 pygame.init()
+f = pygame.font.SysFont(None,10)
 screen_width = 800
 screen_height = 800
 scalerMultiple = ((screen_height + screen_width)/(2*100))
@@ -256,6 +257,8 @@ for rt in routes:
 for hub in hubs_list:
     hubx = hubs_list[hub]["location"]["x"]
     huby = hubs_list[hub]["location"]["y"]
+    textsurface = f.render(hubs_list[hub], True, [0, 0, 0], [255, 255, 255])
+    screen.blit(textsurface, (int(scalerMultiple * (1 + hubx)), int(scalerMultiple * (huby))))
     pygame.draw.rect(screen, (50, 150, 252), (int(scalerMultiple * (1 + hubx)), int(scalerMultiple * (1 + huby)), hubSize, hubSize))
 
 for depot in depots_list:
