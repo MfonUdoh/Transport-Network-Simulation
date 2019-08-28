@@ -2,7 +2,7 @@ import random, math, pygame
 from pygame.locals import *
 
 def generateElements(depots, cons):
-    
+    print('Generating....')
     # I used this dictionary of english-sounding words / syllables to generate the names of the depots
     names = {
             "prefix" : [
@@ -18,7 +18,7 @@ def generateElements(depots, cons):
     # The mapWidth / Length sets the aspect ratio of the map; can make it thinner or wider using these variables
     mapWidth = 100
     mapLength = 100
-    
+    print("...Hubs...")
     # I defined the hubs names and locations manuallly because I wanted to place them relative to where the population centres of the UK are
     hubs_list = {
         "carley" : {
@@ -77,7 +77,7 @@ def generateElements(depots, cons):
             "available_hubs" : ["kingsbury", "spack", "diddley", "chillham", "tuddle"]
         }
     }
-
+    print("...Depots...")
     # The depots are generated dynamically using the following code block
     depots_list = {}
     dist = 10 # This is the divisor that determines how far away the depots can be from the hubs they want to send consignments to (fraction of map's size)
@@ -115,7 +115,7 @@ def generateElements(depots, cons):
             if (depots_list[depot]["location"]["x"] - hubs_list[hub]['location']['x'])**2 + (depots_list[depot]["location"]["y"] - hubs_list[hub]['location']['y'])**2 <= (mapWidth/dist)**2:
                 depots_list[depot]["available_hubs"].append(hub)
                 hubs_list[hub]["available_depots"].append(depot)
-
+    print("...Consignments...")
     num_cons = cons*len(depots_list) # generates a number of consignments per each depot
     cons_list = {}
     for i in range(num_cons):
@@ -251,7 +251,7 @@ def generateElements(depots, cons):
 
 
 
-
+    print("Saving Data .....")
     with open("Routes.txt", "w") as text_file:
         for rt in routes:
             print(
@@ -301,7 +301,7 @@ Least Used Hub:
     return hubs_list, depots_list, cons_list, routes
 
 hubs_list, depots_list, cons_list, routes = generateElements(depots=5, cons=3000)
-
+print("Displaying....")
 pygame.init()
 f = pygame.font.SysFont(None,20)
 screen_width = 800
@@ -367,7 +367,7 @@ for depot in depots_list:
     pygame.draw.circle(screen, (0, 0, 255), (int(scalerMultiple * (1 + depotx)), int(scalerMultiple * (1 + depoty))), depotSize)
 
 pygame.display.update()
-
+print("DONE.")
 while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
