@@ -7,7 +7,7 @@ def genHubs(mapWidth, mapLength, numHubs):
         "carley" : {
             "location" : {"x" : int(mapWidth*.36), "y" : int(mapLength*.28)}, 
             "available_depots" : [],
-            "available_hubs" : ["golligshire", "spack"]
+            "available_hubs" : ["gollingshire", "spack"]
         },
         "gollingshire" : {
             "location" : {"x" : int(mapWidth*.29), "y" : int(mapLength*.30)}, 
@@ -17,12 +17,12 @@ def genHubs(mapWidth, mapLength, numHubs):
         "spack" : {
             "location" : {"x" : int(mapWidth*.38), "y" : int(mapLength*.53)}, 
             "available_depots" : [],
-            "available_hubs" : ["golligshire", "carley", "kingsbury", "stootlan"]
+            "available_hubs" : ["gollingshire", "carley", "kingsbury", "stootlan"]
         },
         "kingsbury" : {
             "location" : {"x" : int(mapWidth*.32), "y" : int(mapLength*.67)},
             "available_depots" : [],
-            "available_hubs" : ["golligshire", "spack", "stootlan", "diddley", "lount"]
+            "available_hubs" : ["gollingshire", "spack", "stootlan", "diddley", "lount"]
         },
         "diddley" : {
             "location" : {"x" : int(mapWidth*.32), "y" : int(mapLength*.80)},
@@ -36,7 +36,7 @@ def genHubs(mapWidth, mapLength, numHubs):
         },
         "lount" : {
             "location" : {"x" : int(mapWidth*.25), "y" : int(mapLength*.82)},
-            "available_depots" : ["kingsbury", "diddley", "atherstone"],
+            "available_depots" : [],
             "available_hubs" : ["kingsbury", "diddley", "atherstone"]
         },
         "atherstone" : {
@@ -50,7 +50,7 @@ def genHubs(mapWidth, mapLength, numHubs):
             "available_hubs" : ["kevlan", "diddley", "tuddle"]
         },
         "kevlan" : {
-            "location" : {"x" : int(mapWidth*.36), "y" : int(mapLength*.93)},
+            "location" : {"x" : int(mapWidth*.36), "y" : int(mapLength*.94)},
             "available_depots" : [],
             "available_hubs" : ["chillham", "diddley", "atherstone"]
         },
@@ -60,12 +60,41 @@ def genHubs(mapWidth, mapLength, numHubs):
             "available_hubs" : ["kingsbury", "spack", "diddley", "chillham", "tuddle"]
         }
     }
+
+    def common(iter1, iter2):
+        """Common returns true if there are any common elements between two lists"""
+        common = False
+        for i in iter1:
+            for j in iter2:
+                if i == j:
+                    common = True
+                    return common
+        return common
+        
+    
     hubs_list = {}
     count = 0
-    for hub in hubs_list_total:
-        if count < numHubs:
-            hubs_list.update({hub : hubs_list_total[hub]})
+    allowed = []
+    while count < numHubs:
+        # This loop will make sure that the specified number of hubs have been selected before continuing
+        selection = random.choice(list(hubs_list_total.keys()))
+        if hubs_list == {}:
+            hubs_list.update({selection : hubs_list_total[selection]}) # Adds the first hub to the hubs list
+            allowed.extend(hubs_list_total[selection]["available_hubs"]) # This makes sure that only hubs connected to the first hub are chosen otherwise the network will not be connected
             count += 1
+        elif selection not in hubs_list and selection in allowed and common(hubs_list_total[selection]["available_hubs"], hubs_list):
+            # Chooses a hub provided; hub not selected already, hub can be reached by others, hub can reach others
+            hubs_list.update({selection : hubs_list_total[selection]})
+            allowed.extend(hubs_list_total[selection]["available_hubs"])
+            count += 1
+
+    for hub in hubs_list:
+        # This nested for loop removes any of the hubs that do not exist in the network from the 'available_hubs'
+        allowed = []
+        for ahub in hubs_list[hub]["available_hubs"]:
+            if ahub in hubs_list:
+                allowed.append(ahub)
+        hubs_list[hub]["available_hubs"] = allowed 
 
     return hubs_list
 
@@ -134,70 +163,69 @@ def genConsignments(numCons, depots_list):
     return cons_list
 
 def genPath(hubs_list, depots_list, cons_list):
-    for con in cons_list:
-        sorter = []
-        sorterOrigin = []
-        sorterDestination = []
-        for hub in hubs_list:
-            # loop calculates the combined distance of a given hub to both the origin and destination of a consignment and records it
-            startDepot = cons_list[con]["origin"]
-            Origin = depots_list[startDepot]
-            targetDepot = cons_list[con]["destination"]
-            Destination = depots_list[targetDepot]
-            Hub = hubs_list[hub]
-            distanceToOrigin = int(math.sqrt((Hub["location"]["x"] - Origin["location"]["x"])**2 + (Hub["location"]["y"] - Origin["location"]["y"])**2))
-            distanceToDestination = int(math.sqrt((Hub["location"]["x"] - Destination["location"]["x"])**2 + (Hub["location"]["y"] - Destination["location"]["y"])**2))
-            sorter.append([hub, distanceToOrigin + distanceToDestination])
-            sorterOrigin.append([hub, distanceToOrigin])
-            sorterDestination.append([hub, distanceToDestination])
-        def takeSecond(elem):
-            return elem[1]
-        sorter.sort(key=takeSecond) # ranks the hubs by their combined distances from both origin and destination, this gives the preferred path as the straightest line  of hubs between the two points
-        sorterOrigin.sort(key=takeSecond)
-        sorterOriginDict = {}
-        for i in sorterOrigin:
-            sorterOriginDict.update({i[0] : i[1]})
-        sorterDestination.sort(key=takeSecond)
-        sorterDestinationDict = {}
-        for i in sorterDestination:
-            sorterDestinationDict.update({i[0] : i[1]})
-        path = cons_list[con]["path"]
-        for hub in sorter:
-            if hub[0] in Origin["available_hubs"]:
-                path.append(hub[0])
-                distFrmOrg = sorterOriginDict[hub[0]]
-                distFrmDst = sorterDestinationDict[hub[0]]
-                cons_list[con]['distance'] += distFrmOrg
-                sorterOriginDict.pop(hub[0])
-                sorterDestinationDict.pop(hub[0])
-                sorter.remove(hub)
+    
+    def dijkstra(graph, sourceVertex, targetVertex):
+        """The Dijkstra SPF algorithm is used to find the shortest path through the network from the source to target node. https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"""
+        def pythag(x1, x2, y1, y2):
+            """Uses the Pythagorean theorem to find the distance between two coordinates."""
+            return math.sqrt((x1-x2)**2 + (y1-y2)**2)
+        
+        Q = []
+        distance = {}
+        previous = {}
+        x2 = graph[sourceVertex]["location"]["x"]
+        y2 = graph[sourceVertex]["location"]["y"]
+        
+        for vertex in graph:
+            # Sets the initial condition for all of the vertices
+            distance[vertex] = 1000000 # Infinity for this application
+            previous[vertex] = ""
+            Q.append(vertex)
+        distance[sourceVertex] = 0
+        
+        while Q != []:
+            minVal = ""
+            for v in Q:
+                if minVal == "":
+                    minVal = [v, distance[v]]
+                elif distance[v] < minVal[1]:
+                    minVal = [v,  distance[v]]
+            vertex = minVal[0] # Select the closest node to the source, this will of course be the source for the first path.
+            Q.pop(Q.index(vertex))
+
+            if vertex == targetVertex:
                 break
-        valid = True
-        while valid:
-            if path[-1] in Destination["available_hubs"]:
-                cons_list[con]['distance'] += distFrmDst
-                valid = False
-            elif (sorterOriginDict[sorter[0][0]] >= distFrmOrg) and (sorterDestinationDict[sorter[0][0]] <= distFrmDst):
-                path.append(sorter[0][0])
-                distFrmOrg = sorterOriginDict[sorter[0][0]]
-                distFrmDst = sorterDestinationDict[sorter[0][0]]
-                sorterOriginDict.pop(sorter[0][0])
-                sorterDestinationDict.pop(sorter[0][0])
-                sorter.remove(sorter[0])
-            elif (sorterOriginDict[sorter[0][0]] >= distFrmOrg):
-                path.append(sorter[0][0])
-                distFrmOrg = sorterOriginDict[sorter[0][0]]
-                distFrmDst = sorterDestinationDict[sorter[0][0]]
-                sorterOriginDict.pop(sorter[0][0])
-                sorterDestinationDict.pop(sorter[0][0])
-                sorter.remove(sorter[0])
-            else:
-                path.append(sorter[0][0])
-                distFrmOrg = sorterOriginDict[sorter[0][0]]
-                distFrmDst = sorterDestinationDict[sorter[0][0]]
-                sorterOriginDict.pop(sorter[0][0])
-                sorterDestinationDict.pop(sorter[0][0])
-                sorter.remove(sorter[0])
+            for link in graph[vertex]["available_hubs"]:
+                # Suggest an alternate path for the neighbour vertex; selected vertex as its previous vertex 
+                alternate = distance[vertex] + pythag(graph[vertex]["location"]["x"], graph[link]["location"]["x"], graph[vertex]["location"]["y"], graph[link]["location"]["y"])
+                if alternate < distance[link]:
+                    # If this alternative path through the selected vertex is shorter than its current path then it will overwrite it.
+                    # This will automatically be true for every neighbour that is still at the initial infinite distance condition.
+                    distance[link] = alternate
+                    previous[link] = vertex
+
+        path = []
+        pathdistance = distance[targetVertex]
+
+        u = targetVertex
+        path.append(u)
+        while u != sourceVertex:
+            # Loop through the previous dictionary to construct the complete path between the source and the target.
+            path.append(previous[u])
+            u = previous[u]
+        path.reverse()
+
+        return pathdistance, path
+
+    for con in cons_list:
+        for ohub in depots_list[cons_list[con]["origin"]]["available_hubs"]:
+            for dhub in depots_list[cons_list[con]["destination"]]["available_hubs"]:
+                # Uses the dijkstra function to find the best option out of all the available origin and destination hubs for the consignment
+                if cons_list[con]["path"] == []:
+                    cons_list[con]["distance"], cons_list[con]["path"] = dijkstra(hubs_list, ohub, dhub)
+                elif cons_list[con]["distance"] > dijkstra(hubs_list, ohub, dhub)[0]:
+                    cons_list[con]["distance"], cons_list[con]["path"] = dijkstra(hubs_list, ohub, dhub)
+
     return cons_list
 
 def genRoutes(hubs_list, depots_list, cons_list):
@@ -207,6 +235,7 @@ def genRoutes(hubs_list, depots_list, cons_list):
         cons_list[con]["routes"] = []
         for dep in path:
             if path.index(dep) != (len(path)-1):
+                # Extract each leg of the path and count how many times its used
                 rt = "{}:{}".format(dep, path[path.index(dep)+1])
                 if (rt not in routes) and ("{}:{}".format(rt.split(":")[1], rt.split(":")[0]) not in routes):
                     routes.update({rt : [1, 0]})
@@ -216,30 +245,36 @@ def genRoutes(hubs_list, depots_list, cons_list):
                         routes[rt][0] += 1
                         cons_list[con]["routes"].append(rt)
                     else:
+                        # Make sure to count the reverse journey also
                         rt = "{}:{}".format(rt.split(":")[1], rt.split(":")[0])
                         routes[rt][0] += 1
                         cons_list[con]["routes"].append(rt)
     
     for route in routes:
+        # Calculate length of each route using the distance between the two hubs
         hub1 = hubs_list[route.split(":")[0]]["location"]
         hub2 = hubs_list[route.split(":")[1]]["location"]
         routes[route][1] = int(math.sqrt((hub2["x"] - hub1["x"])**2 + (hub2["y"]-hub1["y"])**2))
-    for con in cons_list:
-        for route in cons_list[con]["routes"]:
-            cons_list[con]["distance"] += routes[route][1]
+
     totalDistance = 0
     longestDistance = ["", 0]
+    mostUsedRoute = ["", 0]
+    mostUsedHub = ["", 0]
+    leastUsedRoute = ["", 1000000]
+    leastUsedHub = ["", 1000000]
+
     for con in cons_list:
         dis = cons_list[con]["distance"]
         totalDistance += dis
         if dis > longestDistance[1]:
             longestDistance = [cons_list[con]["path"], dis]
     averageDistance = totalDistance / len(cons_list)
-    mostUsedRoute = ["", 0]
-    mostUsedHub = ["", 0]
+    
     for rt in routes:
         if routes[rt][0] > mostUsedRoute[1]:
             mostUsedRoute = [rt, routes[rt][0]]
+        if routes[rt][0] < leastUsedRoute[1]:
+            leastUsedRoute = [rt, routes[rt][0]]
 
     for rt in routes:
         for i in rt.split(":"):
@@ -249,7 +284,9 @@ def genRoutes(hubs_list, depots_list, cons_list):
                     hubCounter += routes[r][0]
             if hubCounter > mostUsedHub[1]:
                 mostUsedHub = [i, hubCounter]
-    summary = [totalDistance, averageDistance, longestDistance, mostUsedRoute, mostUsedHub]
+            if hubCounter < leastUsedHub[1]:
+                leastUsedHub = [i, hubCounter]
+    summary = [totalDistance, averageDistance, longestDistance, mostUsedRoute, mostUsedHub, leastUsedRoute, leastUsedHub]
 
     return routes, summary
 
@@ -261,7 +298,8 @@ def saveData(hubs_list, depots_list, cons_list, routes, summary):
 """Hub Name: {}
 Hub Location: {}
 Hub Available Depots: {}
-""".format(hub, hubs_list[hub]["location"], hubs_list[hub]["available_depots"]), file=text_file)
+Hub Available Hubs: {}
+""".format(hub, hubs_list[hub]["location"], hubs_list[hub]["available_depots"], hubs_list[hub]["available_hubs"]), file=text_file)
 
     print("Saving Depots .....")
     with open("Depots.txt", "w") as text_file:
@@ -300,7 +338,7 @@ Average Distance: {}
 Longest Distance: {}
 Most Used Route: {}
 Most Used Hub: {}
-Least Used Route: 
-Least Used Hub: 
-""".format(len(cons_list), summary[0], summary[1], summary[2], summary[3], summary[4]), file=text_file)
+Least Used Route: {}
+Least Used Hub: {}
+""".format(len(cons_list), summary[0], summary[1], summary[2], summary[3], summary[4], summary[5], summary[6]), file=text_file)
 

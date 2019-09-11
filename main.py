@@ -1,16 +1,20 @@
-import random, math, pygame, elements, config
+import random, math, pygame, elements, config, test
 from pygame.locals import *
 
 # The mapWidth / Length sets the aspect ratio of the map; can make it thinner or wider using these variables
 mapWidth = 100
 mapLength = 100
 
-print("Welcome to the Road Network Simulation")
+print("""
+
+Welcome to the Decentralised Road Network Simulator
+
+""")
 while True:
-    h = input("Enter how many hubs are required (2-11): ")
-    d = input("Enter how many depots are required for each hub: ")
-    c = input("Enter how many consignments are required for each depot: ")
-    if d.isnumeric() and c.isnumeric() and h.isnumeric() and int(h) <= 11 and int(h) >= 2:
+    h = input("Enter how many hubs you would like to simulate (2-11): ")
+    d = input("Enter how many depots you would like for each hub (1 - 10): ")
+    c = input("Enter how many consignments you would like for each depot (1 - 1000): ")
+    if d.isnumeric() and c.isnumeric() and h.isnumeric() and (int(h) <= 11) and (int(h) >= 2) and (int(d) <= 10) and (int(d) >= 1) and (int(c) <= 1000) and (int(c) >= 1):
         numHubs = int(h)
         numDeps = int(d)
         numCons = int(c)
@@ -25,13 +29,15 @@ elements.saveData(hubs_list, depots_list, cons_list, routes, summary)
 
 print("Displaying....")
 pygame.init()
+# Configure the pygame setup
 f = pygame.font.SysFont(None,20)
 screen_width = 800
 screen_height = 800
 scalerMultiple = ((screen_height + screen_width)/(2*100))
-screen = pygame.display.set_mode((screen_width, screen_height))
+screen = pygame.display.set_mode((screen_width, screen_height)) # Create the window surface
 pygame.display.set_caption("Network Map")
 
+# Set element sizes
 hubSize = 20
 depotSize = 5
 landSize = 90
