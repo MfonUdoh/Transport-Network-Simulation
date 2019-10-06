@@ -107,7 +107,7 @@ def genDepots(mapWidth, mapLength, numDeps, hubs_list):
     dist = 10 # This is the divisor that determines how far away the depots can be from the hubs they want to send consignments to (fraction of map's size)
     for hub in hubs_list:
         # if hub == "kingsbury" or hub == "tuddle":
-        for dep in range(numDeps):
+        for i in range(numDeps):
             dx, dy = (mapWidth/dist), (mapLength/dist) # dx and dy are by how much the hub's coordinates are changed by to determine the new depot's x and y coordinates resepectively
             while ((dx**2 + dy**2) > (mapWidth/dist)**2) or (hubs_list[hub]['location']['x'] + dx not in range(mapWidth + 1)) or (hubs_list[hub]['location']['y'] + dy not in range(mapLength + 1)):
                 # loop keeps trying different dx and dy values until the new depot location is both inside the map and within delivery range of the hub
@@ -173,8 +173,6 @@ def genPath(hubs_list, depots_list, cons_list):
         Q = []
         distance = {}
         previous = {}
-        x2 = graph[sourceVertex]["location"]["x"]
-        y2 = graph[sourceVertex]["location"]["y"]
         
         for vertex in graph:
             # Sets the initial condition for all of the vertices
@@ -249,7 +247,7 @@ def genRoutes(hubs_list, depots_list, cons_list):
                         rt = "{}:{}".format(rt.split(":")[1], rt.split(":")[0])
                         routes[rt][0] += 1
                         cons_list[con]["routes"].append(rt)
-    
+    #### TODO Add distance between depot and hubs also ####
     for route in routes:
         # Calculate length of each route using the distance between the two hubs
         hub1 = hubs_list[route.split(":")[0]]["location"]
