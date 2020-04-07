@@ -20,3 +20,12 @@ ukMap = [
     [20, 80], [30, 80], [40, 80], [50, 80], 
     [10, 90], [20, 90], [30, 90], [40, 90]
 ]
+
+# The mapWidth / Length sets the aspect ratio of the map; can make it thinner or wider using these variables
+mapWidth = 100
+mapLength = 100
+
+# Set element sizes
+hubSize = 20
+depotSize = 5
+landSize = 90
