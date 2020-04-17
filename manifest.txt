@@ -2,169 +2,2199 @@
 
 
 Time: 10
-Ath
-{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 497
+{'name': 'tnt0', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 3}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt0', 'state': 'travel', 'dep_time': 0, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
+Kin: 0
 
 
 
 Time: 20
-Ath
-{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 494
+{'name': 'tnt0', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 6}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt0', 'state': 'travel', 'dep_time': 0, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
+Kin: 0
 
 
 
 Time: 30
-Ath
-{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 491
+{'name': 'tnt0', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 9}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt0', 'state': 'travel', 'dep_time': 0, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt1', 'state': 'travel', 'dep_time': 20, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
+Kin: 0
 
 
 
 Time: 40
-Ath
-{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 487
+{'name': 'tnt0', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 13}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt1', 'state': 'travel', 'dep_time': 20, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
-{'name': 'tnt0', 'state': 'wait', 'dep_time': 0, 'arr_time': 30, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Kin: 0
 
 
 
 Time: 50
-Ath
-{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 484
+{'name': 'tnt0', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 16}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt1', 'state': 'travel', 'dep_time': 20, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt2', 'state': 'travel', 'dep_time': 40, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
-{'name': 'tnt0', 'state': 'wait', 'dep_time': 0, 'arr_time': 30, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Kin: 0
 
 
 
 Time: 60
-Ath
-{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 481
+{'name': 'tnt0', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 19}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt2', 'state': 'travel', 'dep_time': 40, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
-{'name': 'tnt0', 'state': 'wait', 'dep_time': 0, 'arr_time': 30, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt1', 'state': 'wait', 'dep_time': 20, 'arr_time': 50, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Kin: 0
 
 
 
 Time: 70
-Ath
-{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 477
+{'name': 'tnt0', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 23}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt2', 'state': 'travel', 'dep_time': 40, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt3', 'state': 'travel', 'dep_time': 60, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
-{'name': 'tnt0', 'state': 'wait', 'dep_time': 0, 'arr_time': 30, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt1', 'state': 'wait', 'dep_time': 20, 'arr_time': 50, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Kin: 0
 
 
 
 Time: 80
-Ath
-{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 474
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 1}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt3', 'state': 'travel', 'dep_time': 60, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
-{'name': 'tnt0', 'state': 'wait', 'dep_time': 0, 'arr_time': 30, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt1', 'state': 'wait', 'dep_time': 20, 'arr_time': 50, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt2', 'state': 'wait', 'dep_time': 40, 'arr_time': 70, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+{'name': 'tnt0', 'state': 'travel', 'dep_time': 75, 'arr_time': 0, 'cargo': 25}
+Kin: 0
 
 
 
 Time: 90
-Ath
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 471
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 4}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt3', 'state': 'travel', 'dep_time': 60, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt4', 'state': 'travel', 'dep_time': 80, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
-{'name': 'tnt0', 'state': 'wait', 'dep_time': 0, 'arr_time': 30, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt1', 'state': 'wait', 'dep_time': 20, 'arr_time': 50, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt2', 'state': 'wait', 'dep_time': 40, 'arr_time': 70, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+{'name': 'tnt0', 'state': 'travel', 'dep_time': 75, 'arr_time': 0, 'cargo': 25}
+Kin: 0
 
 
 
 Time: 100
-Ath
-{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+Ath: 467
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 8}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
 Road
-{'name': 'tnt4', 'state': 'travel', 'dep_time': 80, 'arr_time': 0, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-Kin
-{'name': 'tnt0', 'state': 'wait', 'dep_time': 0, 'arr_time': 30, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt1', 'state': 'wait', 'dep_time': 20, 'arr_time': 50, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt2', 'state': 'wait', 'dep_time': 40, 'arr_time': 70, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
-{'name': 'tnt3', 'state': 'wait', 'dep_time': 60, 'arr_time': 90, 'cargo': ['con0', 'con1', 'con2', 'con3', 'con4', 'con5', 'con6', 'con7', 'con8', 'con9', 'con10', 'con11', 'con12', 'con13', 'con14', 'con15', 'con16', 'con17', 'con18', 'con19']}
+{'name': 'tnt0', 'state': 'travel', 'dep_time': 75, 'arr_time': 0, 'cargo': 25}
+Kin: 0
+
+
+
+Time: 110
+Ath: 464
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 11}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt0', 'state': 'travel', 'dep_time': 75, 'arr_time': 0, 'cargo': 25}
+Kin: 0
+
+
+
+Time: 120
+Ath: 461
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 14}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt0', 'state': 'travel', 'dep_time': 75, 'arr_time': 0, 'cargo': 25}
+Kin: 0
+
+
+
+Time: 130
+Ath: 457
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 18}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt0', 'state': 'travel', 'dep_time': 75, 'arr_time': 0, 'cargo': 25}
+Kin: 0
+
+
+
+Time: 140
+Ath: 454
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 21}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt0', 'state': 'travel', 'dep_time': 75, 'arr_time': 0, 'cargo': 25}
+Kin: 0
+
+
+
+Time: 150
+Ath: 451
+{'name': 'tnt1', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 24}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt0', 'state': 'travel', 'dep_time': 75, 'arr_time': 0, 'cargo': 25}
+Kin: 0
+
+
+
+Time: 160
+Ath: 447
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 3}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt0', 'state': 'travel', 'dep_time': 75, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt1', 'state': 'travel', 'dep_time': 150, 'arr_time': 0, 'cargo': 25}
+Kin: 0
+
+
+
+Time: 170
+Ath: 444
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 6}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt1', 'state': 'travel', 'dep_time': 150, 'arr_time': 0, 'cargo': 25}
+Kin: 2
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 23}
+
+
+
+Time: 180
+Ath: 441
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 9}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt1', 'state': 'travel', 'dep_time': 150, 'arr_time': 0, 'cargo': 25}
+Kin: 6
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 19}
+
+
+
+Time: 190
+Ath: 437
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 13}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt1', 'state': 'travel', 'dep_time': 150, 'arr_time': 0, 'cargo': 25}
+Kin: 9
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 16}
+
+
+
+Time: 200
+Ath: 434
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 16}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt1', 'state': 'travel', 'dep_time': 150, 'arr_time': 0, 'cargo': 25}
+Kin: 12
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 13}
+
+
+
+Time: 210
+Ath: 431
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 19}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt1', 'state': 'travel', 'dep_time': 150, 'arr_time': 0, 'cargo': 25}
+Kin: 16
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 9}
+
+
+
+Time: 220
+Ath: 427
+{'name': 'tnt2', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 23}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt1', 'state': 'travel', 'dep_time': 150, 'arr_time': 0, 'cargo': 25}
+Kin: 19
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 6}
+
+
+
+Time: 230
+Ath: 424
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 1}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt1', 'state': 'travel', 'dep_time': 150, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt2', 'state': 'travel', 'dep_time': 225, 'arr_time': 0, 'cargo': 25}
+Kin: 22
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 3}
+
+
+
+Time: 240
+Ath: 421
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 4}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt2', 'state': 'travel', 'dep_time': 225, 'arr_time': 0, 'cargo': 25}
+Kin: 26
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 24}
+
+
+
+Time: 250
+Ath: 417
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 8}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt2', 'state': 'travel', 'dep_time': 225, 'arr_time': 0, 'cargo': 25}
+Kin: 29
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 21}
+
+
+
+Time: 260
+Ath: 414
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 11}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt2', 'state': 'travel', 'dep_time': 225, 'arr_time': 0, 'cargo': 25}
+Kin: 32
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 18}
+
+
+
+Time: 270
+Ath: 411
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 14}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt2', 'state': 'travel', 'dep_time': 225, 'arr_time': 0, 'cargo': 25}
+Kin: 36
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 14}
+
+
+
+Time: 280
+Ath: 407
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 18}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt2', 'state': 'travel', 'dep_time': 225, 'arr_time': 0, 'cargo': 25}
+Kin: 39
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 11}
+
+
+
+Time: 290
+Ath: 404
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 21}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt2', 'state': 'travel', 'dep_time': 225, 'arr_time': 0, 'cargo': 25}
+Kin: 42
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 8}
+
+
+
+Time: 300
+Ath: 401
+{'name': 'tnt3', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 24}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt2', 'state': 'travel', 'dep_time': 225, 'arr_time': 0, 'cargo': 25}
+Kin: 46
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 4}
+
+
+
+Time: 310
+Ath: 397
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 3}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt2', 'state': 'travel', 'dep_time': 225, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt3', 'state': 'travel', 'dep_time': 300, 'arr_time': 0, 'cargo': 25}
+Kin: 49
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 1}
+
+
+
+Time: 320
+Ath: 394
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 6}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt3', 'state': 'travel', 'dep_time': 300, 'arr_time': 0, 'cargo': 25}
+Kin: 52
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 23}
+
+
+
+Time: 330
+Ath: 391
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 9}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt3', 'state': 'travel', 'dep_time': 300, 'arr_time': 0, 'cargo': 25}
+Kin: 56
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 19}
+
+
+
+Time: 340
+Ath: 387
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 13}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt3', 'state': 'travel', 'dep_time': 300, 'arr_time': 0, 'cargo': 25}
+Kin: 59
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 16}
+
+
+
+Time: 350
+Ath: 384
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 16}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt3', 'state': 'travel', 'dep_time': 300, 'arr_time': 0, 'cargo': 25}
+Kin: 62
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 13}
+
+
+
+Time: 360
+Ath: 381
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 19}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt3', 'state': 'travel', 'dep_time': 300, 'arr_time': 0, 'cargo': 25}
+Kin: 66
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 9}
+
+
+
+Time: 370
+Ath: 377
+{'name': 'tnt4', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 23}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt3', 'state': 'travel', 'dep_time': 300, 'arr_time': 0, 'cargo': 25}
+Kin: 69
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 6}
+
+
+
+Time: 380
+Ath: 374
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 1}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt3', 'state': 'travel', 'dep_time': 300, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt4', 'state': 'travel', 'dep_time': 375, 'arr_time': 0, 'cargo': 25}
+Kin: 72
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 3}
+
+
+
+Time: 390
+Ath: 371
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 4}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt4', 'state': 'travel', 'dep_time': 375, 'arr_time': 0, 'cargo': 25}
+Kin: 76
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 24}
+
+
+
+Time: 400
+Ath: 367
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 8}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt4', 'state': 'travel', 'dep_time': 375, 'arr_time': 0, 'cargo': 25}
+Kin: 79
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 21}
+
+
+
+Time: 410
+Ath: 364
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 11}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt4', 'state': 'travel', 'dep_time': 375, 'arr_time': 0, 'cargo': 25}
+Kin: 82
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 18}
+
+
+
+Time: 420
+Ath: 361
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 14}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt4', 'state': 'travel', 'dep_time': 375, 'arr_time': 0, 'cargo': 25}
+Kin: 86
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 14}
+
+
+
+Time: 430
+Ath: 357
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 18}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt4', 'state': 'travel', 'dep_time': 375, 'arr_time': 0, 'cargo': 25}
+Kin: 89
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 11}
+
+
+
+Time: 440
+Ath: 354
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 21}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt4', 'state': 'travel', 'dep_time': 375, 'arr_time': 0, 'cargo': 25}
+Kin: 92
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 8}
+
+
+
+Time: 450
+Ath: 351
+{'name': 'tnt5', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 24}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt4', 'state': 'travel', 'dep_time': 375, 'arr_time': 0, 'cargo': 25}
+Kin: 96
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 4}
+
+
+
+Time: 460
+Ath: 347
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 3}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt4', 'state': 'travel', 'dep_time': 375, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt5', 'state': 'travel', 'dep_time': 450, 'arr_time': 0, 'cargo': 25}
+Kin: 99
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 1}
+
+
+
+Time: 470
+Ath: 344
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 6}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt5', 'state': 'travel', 'dep_time': 450, 'arr_time': 0, 'cargo': 25}
+Kin: 102
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 23}
+
+
+
+Time: 480
+Ath: 341
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 9}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt5', 'state': 'travel', 'dep_time': 450, 'arr_time': 0, 'cargo': 25}
+Kin: 106
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 19}
+
+
+
+Time: 490
+Ath: 337
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 13}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt5', 'state': 'travel', 'dep_time': 450, 'arr_time': 0, 'cargo': 25}
+Kin: 109
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 16}
+
+
+
+Time: 500
+Ath: 334
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 16}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt5', 'state': 'travel', 'dep_time': 450, 'arr_time': 0, 'cargo': 25}
+Kin: 112
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 13}
+
+
+
+Time: 510
+Ath: 331
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 19}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt5', 'state': 'travel', 'dep_time': 450, 'arr_time': 0, 'cargo': 25}
+Kin: 116
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 9}
+
+
+
+Time: 520
+Ath: 327
+{'name': 'tnt6', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 23}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt5', 'state': 'travel', 'dep_time': 450, 'arr_time': 0, 'cargo': 25}
+Kin: 119
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 6}
+
+
+
+Time: 530
+Ath: 324
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 1}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt5', 'state': 'travel', 'dep_time': 450, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt6', 'state': 'travel', 'dep_time': 525, 'arr_time': 0, 'cargo': 25}
+Kin: 122
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 3}
+
+
+
+Time: 540
+Ath: 321
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 4}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt6', 'state': 'travel', 'dep_time': 525, 'arr_time': 0, 'cargo': 25}
+Kin: 126
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 24}
+
+
+
+Time: 550
+Ath: 317
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 8}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt6', 'state': 'travel', 'dep_time': 525, 'arr_time': 0, 'cargo': 25}
+Kin: 129
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 21}
+
+
+
+Time: 560
+Ath: 314
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 11}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt6', 'state': 'travel', 'dep_time': 525, 'arr_time': 0, 'cargo': 25}
+Kin: 132
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 18}
+
+
+
+Time: 570
+Ath: 311
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 14}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt6', 'state': 'travel', 'dep_time': 525, 'arr_time': 0, 'cargo': 25}
+Kin: 136
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 14}
+
+
+
+Time: 580
+Ath: 307
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 18}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt6', 'state': 'travel', 'dep_time': 525, 'arr_time': 0, 'cargo': 25}
+Kin: 139
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 11}
+
+
+
+Time: 590
+Ath: 304
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 21}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt6', 'state': 'travel', 'dep_time': 525, 'arr_time': 0, 'cargo': 25}
+Kin: 142
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 8}
+
+
+
+Time: 600
+Ath: 301
+{'name': 'tnt7', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 24}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt6', 'state': 'travel', 'dep_time': 525, 'arr_time': 0, 'cargo': 25}
+Kin: 146
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 4}
+
+
+
+Time: 610
+Ath: 297
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 3}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt6', 'state': 'travel', 'dep_time': 525, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt7', 'state': 'travel', 'dep_time': 600, 'arr_time': 0, 'cargo': 25}
+Kin: 149
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 1}
+
+
+
+Time: 620
+Ath: 294
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 6}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt7', 'state': 'travel', 'dep_time': 600, 'arr_time': 0, 'cargo': 25}
+Kin: 152
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 23}
+
+
+
+Time: 630
+Ath: 291
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 9}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt7', 'state': 'travel', 'dep_time': 600, 'arr_time': 0, 'cargo': 25}
+Kin: 156
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 19}
+
+
+
+Time: 640
+Ath: 287
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 13}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt7', 'state': 'travel', 'dep_time': 600, 'arr_time': 0, 'cargo': 25}
+Kin: 159
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 16}
+
+
+
+Time: 650
+Ath: 284
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 16}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt7', 'state': 'travel', 'dep_time': 600, 'arr_time': 0, 'cargo': 25}
+Kin: 162
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 13}
+
+
+
+Time: 660
+Ath: 281
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 19}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt7', 'state': 'travel', 'dep_time': 600, 'arr_time': 0, 'cargo': 25}
+Kin: 166
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 9}
+
+
+
+Time: 670
+Ath: 277
+{'name': 'tnt8', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 23}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt7', 'state': 'travel', 'dep_time': 600, 'arr_time': 0, 'cargo': 25}
+Kin: 169
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 6}
+
+
+
+Time: 680
+Ath: 274
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 1}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt7', 'state': 'travel', 'dep_time': 600, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt8', 'state': 'travel', 'dep_time': 675, 'arr_time': 0, 'cargo': 25}
+Kin: 172
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 3}
+
+
+
+Time: 690
+Ath: 271
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 4}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt8', 'state': 'travel', 'dep_time': 675, 'arr_time': 0, 'cargo': 25}
+Kin: 176
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 24}
+
+
+
+Time: 700
+Ath: 267
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 8}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt8', 'state': 'travel', 'dep_time': 675, 'arr_time': 0, 'cargo': 25}
+Kin: 179
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 21}
+
+
+
+Time: 710
+Ath: 264
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 11}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt8', 'state': 'travel', 'dep_time': 675, 'arr_time': 0, 'cargo': 25}
+Kin: 182
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 18}
+
+
+
+Time: 720
+Ath: 261
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 14}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt8', 'state': 'travel', 'dep_time': 675, 'arr_time': 0, 'cargo': 25}
+Kin: 186
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 14}
+
+
+
+Time: 730
+Ath: 257
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 18}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt8', 'state': 'travel', 'dep_time': 675, 'arr_time': 0, 'cargo': 25}
+Kin: 189
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 11}
+
+
+
+Time: 740
+Ath: 254
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 21}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt8', 'state': 'travel', 'dep_time': 675, 'arr_time': 0, 'cargo': 25}
+Kin: 192
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 8}
+
+
+
+Time: 750
+Ath: 251
+{'name': 'tnt9', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 24}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt8', 'state': 'travel', 'dep_time': 675, 'arr_time': 0, 'cargo': 25}
+Kin: 196
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 4}
+
+
+
+Time: 760
+Ath: 247
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 3}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt8', 'state': 'travel', 'dep_time': 675, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt9', 'state': 'travel', 'dep_time': 750, 'arr_time': 0, 'cargo': 25}
+Kin: 199
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 1}
+
+
+
+Time: 770
+Ath: 244
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 6}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt9', 'state': 'travel', 'dep_time': 750, 'arr_time': 0, 'cargo': 25}
+Kin: 202
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 23}
+
+
+
+Time: 780
+Ath: 241
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 9}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt9', 'state': 'travel', 'dep_time': 750, 'arr_time': 0, 'cargo': 25}
+Kin: 206
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 19}
+
+
+
+Time: 790
+Ath: 237
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 13}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt9', 'state': 'travel', 'dep_time': 750, 'arr_time': 0, 'cargo': 25}
+Kin: 209
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 16}
+
+
+
+Time: 800
+Ath: 234
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 16}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt9', 'state': 'travel', 'dep_time': 750, 'arr_time': 0, 'cargo': 25}
+Kin: 212
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 13}
+
+
+
+Time: 810
+Ath: 231
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 19}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt9', 'state': 'travel', 'dep_time': 750, 'arr_time': 0, 'cargo': 25}
+Kin: 216
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 9}
+
+
+
+Time: 820
+Ath: 227
+{'name': 'tnt10', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 23}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt9', 'state': 'travel', 'dep_time': 750, 'arr_time': 0, 'cargo': 25}
+Kin: 219
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 6}
+
+
+
+Time: 830
+Ath: 224
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 1}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt9', 'state': 'travel', 'dep_time': 750, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt10', 'state': 'travel', 'dep_time': 825, 'arr_time': 0, 'cargo': 25}
+Kin: 222
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 3}
+
+
+
+Time: 840
+Ath: 221
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 4}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt10', 'state': 'travel', 'dep_time': 825, 'arr_time': 0, 'cargo': 25}
+Kin: 226
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 24}
+
+
+
+Time: 850
+Ath: 217
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 8}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt10', 'state': 'travel', 'dep_time': 825, 'arr_time': 0, 'cargo': 25}
+Kin: 229
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 21}
+
+
+
+Time: 860
+Ath: 214
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 11}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt10', 'state': 'travel', 'dep_time': 825, 'arr_time': 0, 'cargo': 25}
+Kin: 232
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 18}
+
+
+
+Time: 870
+Ath: 211
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 14}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt10', 'state': 'travel', 'dep_time': 825, 'arr_time': 0, 'cargo': 25}
+Kin: 236
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 14}
+
+
+
+Time: 880
+Ath: 207
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 18}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt10', 'state': 'travel', 'dep_time': 825, 'arr_time': 0, 'cargo': 25}
+Kin: 239
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 11}
+
+
+
+Time: 890
+Ath: 204
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 21}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt10', 'state': 'travel', 'dep_time': 825, 'arr_time': 0, 'cargo': 25}
+Kin: 242
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 8}
+
+
+
+Time: 900
+Ath: 201
+{'name': 'tnt11', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 24}
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt10', 'state': 'travel', 'dep_time': 825, 'arr_time': 0, 'cargo': 25}
+Kin: 246
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 4}
+
+
+
+Time: 910
+Ath: 197
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 3}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt10', 'state': 'travel', 'dep_time': 825, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt11', 'state': 'travel', 'dep_time': 900, 'arr_time': 0, 'cargo': 25}
+Kin: 249
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 1}
+
+
+
+Time: 920
+Ath: 194
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 6}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt11', 'state': 'travel', 'dep_time': 900, 'arr_time': 0, 'cargo': 25}
+Kin: 252
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': 825, 'arr_time': 912, 'cargo': 23}
+
+
+
+Time: 930
+Ath: 191
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 9}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt11', 'state': 'travel', 'dep_time': 900, 'arr_time': 0, 'cargo': 25}
+Kin: 256
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': 825, 'arr_time': 912, 'cargo': 19}
+
+
+
+Time: 940
+Ath: 187
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 13}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt11', 'state': 'travel', 'dep_time': 900, 'arr_time': 0, 'cargo': 25}
+Kin: 259
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': 825, 'arr_time': 912, 'cargo': 16}
+
+
+
+Time: 950
+Ath: 184
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 16}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt11', 'state': 'travel', 'dep_time': 900, 'arr_time': 0, 'cargo': 25}
+Kin: 262
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': 825, 'arr_time': 912, 'cargo': 13}
+
+
+
+Time: 960
+Ath: 181
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 19}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt11', 'state': 'travel', 'dep_time': 900, 'arr_time': 0, 'cargo': 25}
+Kin: 266
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': 825, 'arr_time': 912, 'cargo': 9}
+
+
+
+Time: 970
+Ath: 177
+{'name': 'tnt12', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 23}
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt11', 'state': 'travel', 'dep_time': 900, 'arr_time': 0, 'cargo': 25}
+Kin: 269
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': 825, 'arr_time': 912, 'cargo': 6}
+
+
+
+Time: 980
+Ath: 174
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 1}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt11', 'state': 'travel', 'dep_time': 900, 'arr_time': 0, 'cargo': 25}
+{'name': 'tnt12', 'state': 'travel', 'dep_time': 975, 'arr_time': 0, 'cargo': 25}
+Kin: 272
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': 825, 'arr_time': 912, 'cargo': 3}
+
+
+
+Time: 990
+Ath: 171
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 4}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt12', 'state': 'travel', 'dep_time': 975, 'arr_time': 0, 'cargo': 25}
+Kin: 276
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': 825, 'arr_time': 912, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': 900, 'arr_time': 987, 'cargo': 24}
+
+
+
+Time: 1000
+Ath: 167
+{'name': 'tnt13', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 8}
+{'name': 'tnt14', 'state': 'wait', 'dep_time': -1, 'arr_time': 0, 'cargo': 0}
+Road
+{'name': 'tnt12', 'state': 'travel', 'dep_time': 975, 'arr_time': 0, 'cargo': 25}
+Kin: 279
+{'name': 'tnt0', 'state': 'wait', 'dep_time': 75, 'arr_time': 162, 'cargo': 0}
+{'name': 'tnt1', 'state': 'wait', 'dep_time': 150, 'arr_time': 237, 'cargo': 0}
+{'name': 'tnt2', 'state': 'wait', 'dep_time': 225, 'arr_time': 312, 'cargo': 0}
+{'name': 'tnt3', 'state': 'wait', 'dep_time': 300, 'arr_time': 387, 'cargo': 0}
+{'name': 'tnt4', 'state': 'wait', 'dep_time': 375, 'arr_time': 462, 'cargo': 0}
+{'name': 'tnt5', 'state': 'wait', 'dep_time': 450, 'arr_time': 537, 'cargo': 0}
+{'name': 'tnt6', 'state': 'wait', 'dep_time': 525, 'arr_time': 612, 'cargo': 0}
+{'name': 'tnt7', 'state': 'wait', 'dep_time': 600, 'arr_time': 687, 'cargo': 0}
+{'name': 'tnt8', 'state': 'wait', 'dep_time': 675, 'arr_time': 762, 'cargo': 0}
+{'name': 'tnt9', 'state': 'wait', 'dep_time': 750, 'arr_time': 837, 'cargo': 0}
+{'name': 'tnt10', 'state': 'wait', 'dep_time': 825, 'arr_time': 912, 'cargo': 0}
+{'name': 'tnt11', 'state': 'wait', 'dep_time': 900, 'arr_time': 987, 'cargo': 21}

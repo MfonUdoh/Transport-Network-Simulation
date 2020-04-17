@@ -2,7 +2,7 @@ class Road(object):
     def __init__(self, name):
         self.name = name
         self.trailers = []
-        self.time_length = 30
+        self.time_length = 87
 
     def __str__(self):
         return self.name

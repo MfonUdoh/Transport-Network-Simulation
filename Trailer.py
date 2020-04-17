@@ -8,7 +8,7 @@ class Trailer(object):
         self.destination = ''
         self.origin = ''
         self.location = ''
-        self.capacity = 100
+        self.capacity = 25
         self.cargo = []
         self.dep_time = -1
         self.arr_time = 0
@@ -16,7 +16,7 @@ class Trailer(object):
     def __str__(self):
         return self.name
     def define(self):
-        return {'name':self.name,'state':self.state,'dep_time':self.dep_time, 'arr_time':self.arr_time, 'cargo':[str(x) for x in self.cargo]}
+        return {'name':self.name,'state':self.state,'dep_time':self.dep_time, 'arr_time':self.arr_time, 'cargo':len(self.cargo)}
 
     def travel(self, now):
         # Defining which course of action to take in 
