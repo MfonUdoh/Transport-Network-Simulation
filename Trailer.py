@@ -4,11 +4,11 @@ class Trailer(object):
 
     def __init__(self, name):
         self.name = name
-        self.state = "wait"
+        self.state = "waiting"
         self.destination = ''
         self.origin = ''
         self.location = ''
-        self.capacity = 25
+        self.capacity = 30
         self.cargo = []
         self.dep_time = -1
         self.arr_time = 0

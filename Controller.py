@@ -1,7 +1,7 @@
 import json, Trailer, Hub, Consignment, Road
 
 time = 1
-trailers = ['tnt{}'.format(x) for x in range(15)]
+trailers = ['tnt{}'.format(x) for x in range(20)]
 cons = ['con{}'.format(x) for x in range(500)]
 
 ath = Hub.Hub('Atherstone')
@@ -14,17 +14,18 @@ for trailer in trailers:
 for con in cons:
     ath.cargo.append(Consignment.Consignment(con))
 
-
+run = True
 with open('manifest.txt', 'w') as text_file:
-    while time <= 1000:
+    while run:
         if len(ath.cargo) > 0 and len(ath.trailers) > 0:
             # Loads the trailer
             ath.load_count += 1
+            ath.trailers[0].state = 'loading'
             if ath.load_count == ath.load_time:
                 ath.trailers[0].cargo.append(ath.cargo[0])
                 ath.cargo.pop(0)
                 ath.load_count = 0
-            if len(ath.trailers[0].cargo) >= ath.trailers[0].capacity:
+            if len(ath.trailers[0].cargo) >= ath.trailers[0].capacity or (len(ath.trailers) > 0 and len(ath.cargo) == 0):
                 # Sends off the trailer
                 ath.trailers[0].travel(time)
                 ath.roads[-1].trailers.append(ath.trailers[0])
@@ -39,14 +40,16 @@ with open('manifest.txt', 'w') as text_file:
         if len(kin.trailers) > 0:
             for t in kin.trailers:
                 if len(t.cargo) > 0:
-                    t.status = 'loading'
+                    t.state = 'loading'
                     break
-            kin.load_count += 1
-            if kin.load_count == kin.load_time:
-                kin.cargo.append(t.cargo[0])
-                t.cargo.pop(0)
-                kin.load_count = 0
-
+                else:
+                    t.state = 'waiting'
+            if len(t.cargo) > 0:
+                kin.load_count += 1
+                if kin.load_count == kin.load_time:
+                    kin.cargo.append(t.cargo[0])
+                    t.cargo.pop(0)
+                    kin.load_count = 0
 
         time += 1
         if time % 10 == 0:
@@ -65,5 +68,5 @@ Time: {}""".format(time), file=text_file)
                 print(kin.trailers[a].define(), file=text_file)
     
         # Stops the loop when all has arrived
-        if len(ath.trailers) == 0 and len(ath.roads[0].trailers) == 0:
-            break
+        if len(kin.cargo) == len(cons):
+            run = False
