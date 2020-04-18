@@ -14,8 +14,8 @@ class Road(object):
             if now - self.trailers[t].dep_time >= self.time_length:
                 arrived.append(self.trailers[t])
                 done.append(t)
-
-        for d in done:        
-            self.trailers.pop(d)
+        done.reverse()
+        for i in done:
+            self.trailers.pop(i)
 
         return arrived

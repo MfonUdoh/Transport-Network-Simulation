@@ -9,4 +9,4 @@ class Consignment():
         return self.name
 
     def define(self):
-        return {'name': self.name, 'delivered': self.delivered}
+        return {'name': self.name, 'destination':self.destination.name, 'delivered': self.delivered}

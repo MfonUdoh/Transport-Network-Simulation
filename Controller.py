@@ -1,8 +1,8 @@
 import json, random, Trailer, Hub, Consignment, Road
 
 time = 1
-trailers = ['tnt{}'.format(x) for x in range(20)]
-cons = ['con{}'.format(x) for x in range(500)]
+trailers = ['tnt{}'.format(x) for x in range(15)]
+cons = ['con{}'.format(x) for x in range(750)]
 hubs = ['ath', 'kin', 'lount']
 places = []
 
@@ -56,8 +56,8 @@ Time: {}""".format(time), file=text_file)
                 print('{}: {}'.format(hub.name, len(hub.cargo)), file=text_file)
                 for trailer in range(len(hub.trailers)):
                     print(hub.trailers[trailer].define(), file=text_file)
-                print('Road---', file=text_file)
                 for i in range(len(hub.roads)):
+                    print('Road {}'.format(hub.roads[i]), file=text_file)
                     for j in range(len(hub.roads[i].trailers)):
                         print(hub.roads[i].trailers[j].define(), file=text_file)
                 print("", file=text_file)
@@ -68,5 +68,8 @@ Time: {}""".format(time), file=text_file)
     
 for hub in places:
     hub.check()
-    for con in hub.cargo:
-        print(con.define())
+    print("")
+    print(hub.name)
+    for trailer in hub.trailers:
+        if trailer.dep_time == -1:
+            print(trailer.define())

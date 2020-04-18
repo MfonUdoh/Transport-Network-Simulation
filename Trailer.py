@@ -7,12 +7,15 @@ class Trailer(object):
         self.state = "waiting"
         self.destination = ''
         self.origin = ''
-        self.capacity = 30
+        self.capacity = 50
         self.cargo = []
         self.dep_time = -1
         self.arr_time = 0
         self.load_count = 0
-        self.load_time = 3
+        self.load_time = 2
+        self.unload_count = 0
+        self.unload_time = 0
+        self.wait_time = 0
 
     def __str__(self):
         return self.name
@@ -26,5 +29,5 @@ class Trailer(object):
         self.dep_time = now
 
     def arrive(self, now):
-        self.state = 'wait'
+        self.state = 'waiting'
         self.arr_time = now
