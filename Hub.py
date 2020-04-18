@@ -13,14 +13,14 @@ class Hub(object):
     def send(self, time):
         if len(self.cargo) > 0 and len(self.trailers) > 0:
             # Loads the trailer
-            self.load_count += 1
+            self.trailers[0].load_count += 1
             self.trailers[0].state = 'loading'
-            if self.load_count == self.load_time:
+            if self.trailers[0].load_count >= self.trailers[0].load_time:
                 for c in range(len(self.cargo)):
                     if self.cargo[c].destination == self.trailers[0].destination:
                         self.trailers[0].cargo.append(self.cargo[c])
                         self.cargo.pop(c)
-                        self.load_count = 0
+                        self.trailers[0].load_count = 0
                         break
             if len(self.trailers[0].cargo) >= self.trailers[0].capacity or (len(self.trailers) > 0 and len(self.cargo) == 0):
                 # Sends off the trailer
@@ -42,11 +42,18 @@ class Hub(object):
                 else:
                     t.state = 'waiting'
             if len(t.cargo) > 0:
-                self.load_count += 1
-                if self.load_count == self.load_time:
+                t.load_count += 1
+                if t.load_count == t.load_time:
                     for c in range(len(t.cargo)):
-                        if t.cargo[c].destination == t.destination:
+                        if t.cargo[c].destination == self:
                             self.cargo.append(t.cargo[c])
                             t.cargo.pop(c)
-                            self.load_count = 0
+                            t.load_count = 0
                             break
+
+    def check(self):
+        for con in self.cargo:
+            if con.destination == self:
+                con.delivered = True
+
+        

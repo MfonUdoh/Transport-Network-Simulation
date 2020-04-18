@@ -11,6 +11,8 @@ class Trailer(object):
         self.cargo = []
         self.dep_time = -1
         self.arr_time = 0
+        self.load_count = 0
+        self.load_time = 3
 
     def __str__(self):
         return self.name

@@ -63,5 +63,10 @@ Time: {}""".format(time), file=text_file)
                 print("", file=text_file)
     
         # Stops the loop when all has arrived
-        if time == 1000:
+        if time == 2000:
             run = False
+    
+for hub in places:
+    hub.check()
+    for con in hub.cargo:
+        print(con.define())
