@@ -1,4 +1,6 @@
 import tkinter as tk
+from Controller import Controller
+import time
 
 class GUI(tk.Frame):
     def __init__(self):
@@ -28,11 +30,17 @@ class GUI(tk.Frame):
             self.mainWindow, bg="green"
         )
         self.map.grid(row=0, column=1, sticky="nsew")
-        self.map.columnconfigure([x for x in range(10)], weight=1)
-        self.map.rowconfigure([x for x in range(10)], weight=1)
+        # self.map.columnconfigure([x for x in range(10)], weight=1)
+        # self.map.rowconfigure([x for x in range(10)], weight=1)
 
         self.option_buttons()
         self.vars()
+        self.hubs = {}
+
+        try:
+            self.OS.sim()
+        except:
+            pass
 
         self.mainloop()
 
@@ -57,20 +65,21 @@ class GUI(tk.Frame):
 
         btn_stop = tk.Button(
             self.topBar, text="Stop", 
-            fg="white", highlightbackground="black"
+            fg="white", highlightbackground="black", command=self.stop_sim
             ).grid(row=0, column=3, padx=xPadding, pady=yPadding)
 
         btn_reset = tk.Button(
             self.topBar, text="Reset", 
-            fg="white", highlightbackground="black"
+            fg="white", highlightbackground="black", command=self.reset_sim
             ).grid(row=0, column=4, padx=xPadding, pady=yPadding)
 
     def vars(self):
         self.vars = {}
         vars = {
-            "hub"   :   ["Hub", 10],
-            "dep"   :   ["Depot", 5],
-            "con"   :   ["Consignment", 20]
+            "time"  :   ["Time", 5000],
+            "hub"   :   ["Hubs", 10],
+            "dep"   :   ["Depots", 5],
+            "con"   :   ["Consignments", 25]
         }
 
         def var_hub(vars, var, row):
@@ -87,7 +96,7 @@ class GUI(tk.Frame):
 
             tk.Label(
                 var_frameTop, 
-                text="{}s".format(vars[var][0]),
+                text="{}".format(vars[var][0]),
                 fg="white", bg="black"
             ).grid(row=0, column=0, sticky="ew")
 
@@ -102,29 +111,53 @@ class GUI(tk.Frame):
             lbl_val.grid(row=0, column=1, sticky="ew")
             self.vars[var] = lbl_val["text"]
 
-            def increment(var, j):
+            def increment(var, inc):
                 vars = {
-                "hub"   :   [2, 15],
-                "dep"   :   [1, 10],
-                "con"   :   [1, 50]
+                "time"  :   [1000, 10000, 1000],
+                "hub"   :   [2, 15, 1],
+                "dep"   :   [1, 10, 1],
+                "con"   :   [1, 75, 5]
                 }
+                if inc == "+":
+                    j = vars[var][2]
+                else:
+                    j = -vars[var][2]
                 i = int(lbl_val["text"])
                 if i+j <= vars[var][1] and i+j >= vars[var][0]:
                     lbl_val["text"] = i+j
                     self.vars[var] = lbl_val["text"]
 
-            tk.Button(var_frameBottom, text="+", command=lambda: increment(var, 1),
+            tk.Button(var_frameBottom, text="+", command=lambda: increment(var, "+"),
             fg="white", highlightbackground="black").grid(row=0, column=2)
-            tk.Button(var_frameBottom, text="-", command=lambda: increment(var, -1),
+            tk.Button(var_frameBottom, text="-", command=lambda: increment(var, "-"),
             fg="white", highlightbackground="black").grid(row=0, column=0)
-        
+
         i = 0
         for v in vars:
             var_hub(vars, v, i)
             i += 1
 
     def start_sim(self):
-        hub = tk.Frame(self.map, bg="blue", width=20, height=20)
-        hub.grid(row=self.vars['hub'], column=self.vars['dep'])
+        if self.hubs == {}:
+            self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']))
+            for i in self.OS.world['hubs']:
+                size = len(self.OS.world['hubs'][i].cargo) + 5
+                self.hubs[i] = tk.Frame(self.map, bg="blue",width=size, height=size)
+                # self.hubs[i].grid(row=self.OS.world['hubs'][i].y, column=self.OS.world['hubs'][i].x)
+                self.hubs[i].place(relx=self.OS.world['hubs'][i].y, rely=self.OS.world['hubs'][i].x)
+            self.run = True
+            while self.OS.time < int(self.vars["time"]) and self.run:
+                self.OS.sim()
+                self.update_idletasks()
+                self.update()
+
+    def stop_sim(self):
+        self.run = False
+
+    def reset_sim(self):
+        for i in self.hubs:
+            self.hubs[i].place_forget()
+        self.hubs = {}
+        self.update_idletasks()
 
 GUI()

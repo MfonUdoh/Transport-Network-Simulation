@@ -4,6 +4,7 @@ class Hub(object):
         self.trailers = []
         self.roads = []
         self.cargo = []
+        self.park = {}
         self.load_count = 0
         self.load_time = 3
 

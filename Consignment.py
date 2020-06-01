@@ -1,8 +1,8 @@
 class Consignment():
-    def __init__(self, name):
+    def __init__(self, name, origin, destination):
         self.name = name
-        self.origin = ''
-        self.destination = ''
+        self.origin = origin
+        self.destination = destination
         self.delivered = False
     
     def __str__(self):
