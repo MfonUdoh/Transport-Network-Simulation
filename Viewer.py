@@ -50,27 +50,27 @@ class GUI(tk.Frame):
 
         btn_open = tk.Button(
             self.topBar, text="Open", 
-            fg="white", highlightbackground="black"
+            fg="white", bg="black", highlightbackground="black"
             ).grid(row=0, column=0, padx=xPadding, pady=yPadding)
 
         btn_save = tk.Button(
             self.topBar, text="Save",
-            fg="white", highlightbackground="black"
+            fg="white", bg="black", highlightbackground="black"
             ).grid(row=0, column=1, padx=xPadding, pady=yPadding)
 
         btn_run = tk.Button(
             self.topBar, text="Run", 
-            fg="white", highlightbackground="black", command=self.start_sim
+            fg="white", bg="black", highlightbackground="black", command=self.start_sim
             ).grid(row=0, column=2, padx=xPadding, pady=yPadding)
 
         btn_stop = tk.Button(
             self.topBar, text="Stop", 
-            fg="white", highlightbackground="black", command=self.stop_sim
+            fg="white", bg="black", highlightbackground="black", command=self.stop_sim
             ).grid(row=0, column=3, padx=xPadding, pady=yPadding)
 
         btn_reset = tk.Button(
             self.topBar, text="Reset", 
-            fg="white", highlightbackground="black", command=self.reset_sim
+            fg="white", bg="black", highlightbackground="black", command=self.reset_sim
             ).grid(row=0, column=4, padx=xPadding, pady=yPadding)
 
     def vars(self):
@@ -128,9 +128,9 @@ class GUI(tk.Frame):
                     self.vars[var] = lbl_val["text"]
 
             tk.Button(var_frameBottom, text="+", command=lambda: increment(var, "+"),
-            fg="white", highlightbackground="black").grid(row=0, column=2)
+            fg="white", bg="black", highlightbackground="black").grid(row=0, column=2)
             tk.Button(var_frameBottom, text="-", command=lambda: increment(var, "-"),
-            fg="white", highlightbackground="black").grid(row=0, column=0)
+            fg="white", bg="black", highlightbackground="black").grid(row=0, column=0)
 
         i = 0
         for v in vars:
