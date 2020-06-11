@@ -1,4 +1,4 @@
-import json, random, Trailer, Hub, Consignment, Road
+import json, random, numpy, Trailer, Hub, Consignment, Road
 
 class Controller(object):
     def __init__(self, num_hubs, num_deps, num_cons):
@@ -7,15 +7,36 @@ class Controller(object):
             'roads'   :   {}
         }
         self.time = 0
+        self.create_hubs(num_hubs)
+        self.create_cons(num_cons)
+
+    def create_hubs(self, num_hubs):
         for hub in ['hub{}'.format(x) for x in range(num_hubs)]:
             self.world['hubs'][hub] = Hub.Hub(hub)
             self.world['hubs'][hub].x = random.random()
             self.world['hubs'][hub].y = random.random()
+
+        for hubA in self.world['hubs']:
+            dist = []
+            for hubB in self.world['hubs']:
+                distance = self.distance(self.world['hubs'][hubA].x, self.world['hubs'][hubA].y, self.world['hubs'][hubB].x, self.world['hubs'][hubB].y)
+                if distance != 0:
+                    dist.append([distance, hubB])
+
+            connections = []
+            number_connections = random.randint(1, 2)
+            min = []
+            for element in dist:
+                if min == [] or min[0] > element[0]:
+                    min = element
+ 
         for i in self.world['hubs']:
             for j in self.world['hubs']:
                 if i != j:
                     self.world['roads']['{}:{}'.format(i, j)] = Road.Road('{}:{}'.format(i, j))
                     self.world['hubs'][i].park['Trailer{}:{}'.format(i, j)] = Trailer.Trailer('Trailer{}:{}'.format(i, j))
+
+    def create_cons(self, num_cons):
         cons = ['con{}'.format(x) for x in range(num_cons*len(self.world['hubs']))]
         while cons != []:
             choice = random.choice(list(self.world['hubs'].values()))
@@ -32,6 +53,9 @@ class Controller(object):
 
     def sim(self):
         self.time += 1
+
+    def distance(self, x1, y1, x2, y2):
+        return numpy.sqrt(abs(x1 - x2)**2 + abs(y1 - y2)**2)
 
 # time = 1
 # trailers = ['tnt{}'.format(x) for x in range(15)]
