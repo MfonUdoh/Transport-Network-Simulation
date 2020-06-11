@@ -24,19 +24,14 @@ class Controller(object):
                 choice.cargo.append(Consignment.Consignment(cons[0], choice, choice2))
                 cons.pop(0)
 
-        print('done')
-
     def load_trailers(self):
         for hub in self.world['hubs']:
             for trailer in hub.park:
-                pass
+                if trailer.state == 'loading':
+                    pass
 
     def sim(self):
         self.time += 1
-        print(self.time)
-
-
-Controller(3, 5, 10)
 
 # time = 1
 # trailers = ['tnt{}'.format(x) for x in range(15)]

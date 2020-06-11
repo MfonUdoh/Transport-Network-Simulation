@@ -73,6 +73,11 @@ class GUI(tk.Frame):
             fg="white", highlightbackground="black", command=self.reset_sim
             ).grid(row=0, column=4, padx=xPadding, pady=yPadding)
 
+        self.time = 0
+        time = tk.Label(
+            self.topBar, text=self.time, fg="white", bg="black"
+            ).grid(row=0, column=5, padx=xPadding, pady=yPadding)
+
     def vars(self):
         self.vars = {}
         vars = {
@@ -143,7 +148,6 @@ class GUI(tk.Frame):
             for i in self.OS.world['hubs']:
                 size = len(self.OS.world['hubs'][i].cargo) + 5
                 self.hubs[i] = tk.Frame(self.map, bg="blue",width=size, height=size)
-                # self.hubs[i].grid(row=self.OS.world['hubs'][i].y, column=self.OS.world['hubs'][i].x)
                 self.hubs[i].place(relx=self.OS.world['hubs'][i].y, rely=self.OS.world['hubs'][i].x)
             self.run = True
             while self.OS.time < int(self.vars["time"]) and self.run:
@@ -159,5 +163,11 @@ class GUI(tk.Frame):
             self.hubs[i].place_forget()
         self.hubs = {}
         self.update_idletasks()
+
+    def place_objects(self):
+        pass
+
+    def clear_objects(self):
+        pass
 
 GUI()
