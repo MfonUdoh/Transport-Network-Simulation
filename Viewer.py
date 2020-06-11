@@ -82,7 +82,7 @@ class GUI(tk.Frame):
         self.vars = {}
         vars = {
             "time"  :   ["Time", 5000],
-            "hub"   :   ["Hubs", 10],
+            "hub"   :   ["Hubs", 9],
             "dep"   :   ["Depots", 5],
             "con"   :   ["Consignments", 25]
         }
@@ -149,6 +149,7 @@ class GUI(tk.Frame):
                 size = len(self.OS.world['hubs'][i].cargo) + 5
                 self.hubs[i] = tk.Frame(self.map, bg="blue",width=size, height=size)
                 self.hubs[i].place(relx=self.OS.world['hubs'][i].y, rely=self.OS.world['hubs'][i].x)
+                tk.Label(self.hubs[i], text=str(self.OS.world['hubs'][i])[-1]).pack()
             self.run = True
             while self.OS.time < int(self.vars["time"]) and self.run:
                 self.OS.sim()

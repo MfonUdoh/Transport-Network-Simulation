@@ -20,16 +20,28 @@ class Controller(object):
             dist = []
             for hubB in self.world['hubs']:
                 distance = self.distance(self.world['hubs'][hubA].x, self.world['hubs'][hubA].y, self.world['hubs'][hubB].x, self.world['hubs'][hubB].y)
-                if distance != 0:
+                if distance != 0 and hubB not in self.world['hubs'][hubA].connections:
                     dist.append([distance, hubB])
 
             connections = []
             number_connections = random.randint(1, 2)
-            min = []
-            for element in dist:
-                if min == [] or min[0] > element[0]:
-                    min = element
- 
+            passes = 1
+            while passes <= number_connections and dist != []:
+                min = []
+                for element in dist:
+                    if min == [] or min[0] > element[0]:
+                        min = [element[0], element[1], dist.index(element)]
+                dist.pop(min[2])
+                connections.append(min[1])
+                self.world['hubs'][min[1]].connections.append(hubA)
+                passes += 1
+            
+            for e in connections:
+                self.world['hubs'][hubA].connections.append(e)
+        
+        for hub in self.world['hubs']:
+            print(self.world['hubs'][hub].connections)
+
         for i in self.world['hubs']:
             for j in self.world['hubs']:
                 if i != j:

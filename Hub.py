@@ -2,6 +2,7 @@ class Hub(object):
     def __init__(self, name):
         self.name = name
         self.trailers = []
+        self.connections = []
         self.roads = []
         self.cargo = []
         self.park = {}
