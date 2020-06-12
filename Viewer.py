@@ -158,6 +158,7 @@ class GUI(tk.Frame):
                 x = self.OS.world['hubs'][i].x*(self.width-100)
                 y = self.OS.world['hubs'][i].y*self.height
                 self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red",width=2)
+                self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][i]))
                 # self.hubs[i] = tk.Frame(self.map, bg="blue",width=size, height=size)
                 # self.hubs[i].place(relx=self.OS.world['hubs'][i].y, rely=self.OS.world['hubs'][i].x)
                 # tk.Label(self.hubs[i], text=str(self.OS.world['hubs'][i])[-1]).pack()

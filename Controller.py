@@ -56,7 +56,61 @@ class Controller(object):
             choice2 = random.choice(list(self.world['hubs'].values()))
             if choice != choice2:
                 choice.cargo.append(Consignment.Consignment(cons[0], choice, choice2))
+                self.path(choice.cargo[-1])
                 cons.pop(0)
+
+    def path(self, consignment):
+            
+        def dijkstra(graph, sourceVertex, targetVertex):
+            """The Dijkstra SPF algorithm is used to find the shortest path through the network from the source to target node. https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"""
+            
+            Q = []
+            distance = {}
+            previous = {}
+            
+            for vertex in graph:
+                # Sets the initial condition for all of the vertices
+                distance[vertex] = 1000000 # Infinity for this application
+                previous[vertex] = ""
+                Q.append(vertex)
+            distance[sourceVertex] = 0
+            
+            while Q != []:
+                minVal = ""
+                for v in Q:
+                    if minVal == "":
+                        minVal = [v, distance[v]]
+                    elif distance[v] < minVal[1]:
+                        minVal = [v,  distance[v]]
+                vertex = minVal[0] # Select the closest node to the source, this will of course be the source for the first path.
+                Q.pop(Q.index(vertex))
+
+                if vertex == targetVertex:
+                    break
+                for link in graph[vertex].connections:
+                    # Suggest an alternate path for the neighbour vertex; selected vertex as its previous vertex 
+                    alternate = distance[vertex] + self.distance(graph[vertex].x, graph[vertex].y, graph[link].x, graph[link].y)
+                    if alternate < distance[link]:
+                        # If this alternative path through the selected vertex is shorter than its current path then it will overwrite it.
+                        # This will automatically be true for every neighbour that is still at the initial infinite distance condition.
+                        distance[link] = alternate
+                        previous[link] = vertex
+
+            path = []
+            pathdistance = distance[targetVertex]
+
+            u = targetVertex
+            path.append(u)
+            while u != sourceVertex:
+                # Loop through the previous dictionary to construct the complete path between the source and the target.
+                path.append(previous[u])
+                u = previous[u]
+            path.reverse()
+
+            return path, pathdistance
+
+        consignment.path, consignment.pathDistance = dijkstra(self.world['hubs'], str(consignment.origin), str(consignment.destination))
+        consignment.update_journey(str(consignment.origin))
 
     def load_trailers(self):
         for hub in self.world['hubs']:

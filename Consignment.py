@@ -3,6 +3,10 @@ class Consignment():
         self.name = name
         self.origin = origin
         self.destination = destination
+        self.path = []
+        self.pathDistance = 0
+        self.currentStop = origin
+        self.nextStop = None
         self.delivered = False
     
     def __str__(self):
@@ -10,3 +14,12 @@ class Consignment():
 
     def define(self):
         return {'name': self.name, 'destination':self.destination.name, 'delivered': self.delivered}
+
+    def update_journey(self, here):
+        # Updates current stop and next stop given the current location in the path
+        hereIndex = self.path.index(here)
+        self.currentStop = self.path[hereIndex]
+        if self.currentStop != self.destination:
+            self.nextStop = self.path[hereIndex+1]
+        else:
+            self.delivered = True
