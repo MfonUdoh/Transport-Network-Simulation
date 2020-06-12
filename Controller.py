@@ -38,15 +38,16 @@ class Controller(object):
             
             for node in connections:
                 self.world['hubs'][hubA].connections.append(node)
-        
-        for hub in self.world['hubs']:
-            print(self.world['hubs'][hub].connections)
 
-        for i in self.world['hubs']:
-            for j in self.world['hubs']:
-                if i != j:
-                    self.world['roads']['{}:{}'.format(i, j)] = Road.Road('{}:{}'.format(i, j))
-                    self.world['hubs'][i].park['Trailer{}:{}'.format(i, j)] = Trailer.Trailer('Trailer{}:{}'.format(i, j))
+        for hubA in self.world['hubs']:
+            for hubB in self.world['hubs'][hubA].connections:
+                x1 = self.world['hubs'][hubA].x
+                y1 = self.world['hubs'][hubA].y
+                x2 = self.world['hubs'][hubB].x
+                y2 = self.world['hubs'][hubB].y
+        
+                self.world['roads']['{}:{}'.format(hubA, hubB)] = Road.Road('{}:{}'.format(hubA, hubB), x1, y1, x2, y2)
+                self.world['hubs'][hubA].park['Trailer{}:{}'.format(hubA, hubB)] = Trailer.Trailer('Trailer{}:{}'.format(hubA, hubB))
 
     def create_cons(self, num_cons):
         cons = ['con{}'.format(x) for x in range(num_cons*len(self.world['hubs']))]

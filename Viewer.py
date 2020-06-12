@@ -145,6 +145,14 @@ class GUI(tk.Frame):
     def start_sim(self):
         if self.OS == 0:
             self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']))
+            
+            for i in self.OS.world['roads']:
+                x1 = self.OS.world['roads'][i].x1*(self.width-100)
+                y1 = self.OS.world['roads'][i].y1*self.height
+                x2 = self.OS.world['roads'][i].x2*(self.width-100)
+                y2 = self.OS.world['roads'][i].y2*self.height
+                self.map.create_line(x1, y1, x2, y2, fill="blue", width=2)
+
             for i in self.OS.world['hubs']:
                 size = (len(self.OS.world['hubs'][i].cargo) + 3)/2
                 x = self.OS.world['hubs'][i].x*(self.width-100)
