@@ -19,7 +19,7 @@ class Consignment():
         # Updates current stop and next stop given the current location in the path
         hereIndex = self.path.index(here)
         self.currentStop = self.path[hereIndex]
-        if self.currentStop != self.destination:
+        if self.currentStop != self.destination.name:
             self.nextStop = self.path[hereIndex+1]
         else:
             self.delivered = True

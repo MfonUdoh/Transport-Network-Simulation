@@ -145,43 +145,41 @@ class GUI(tk.Frame):
     def start_sim(self):
         if self.OS == 0:
             self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']))
-            
-            for i in self.OS.world['roads']:
-                x1 = self.OS.world['roads'][i].x1*(self.width-100)
-                y1 = self.OS.world['roads'][i].y1*self.height
-                x2 = self.OS.world['roads'][i].x2*(self.width-100)
-                y2 = self.OS.world['roads'][i].y2*self.height
-                self.map.create_line(x1, y1, x2, y2, fill="blue", width=2)
-
-            for i in self.OS.world['hubs']:
-                size = (len(self.OS.world['hubs'][i].cargo) + 3)/2
-                x = self.OS.world['hubs'][i].x*(self.width-100)
-                y = self.OS.world['hubs'][i].y*self.height
-                self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red",width=2)
-                self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][i]))
-                # self.hubs[i] = tk.Frame(self.map, bg="blue",width=size, height=size)
-                # self.hubs[i].place(relx=self.OS.world['hubs'][i].y, rely=self.OS.world['hubs'][i].x)
-                # tk.Label(self.hubs[i], text=str(self.OS.world['hubs'][i])[-1]).pack()
+            self.place_objects()
             self.run = True
             while self.OS.time < int(self.vars["time"]) and self.run:
+                self.clean_map()
+                self.place_objects()
                 self.OS.sim()
                 self.time['text'] = self.OS.time
                 self.update_idletasks()
                 self.update()
+            for hub in self.OS.world['hubs']:
+                print(len(self.OS.world['hubs'][hub].deliveredBin))
 
     def stop_sim(self):
         self.run = False
 
     def reset_sim(self):
+        self.stop_sim()
         self.clean_map()
         self.OS = 0
         self.time['text'] = 0
         self.update_idletasks()
 
     def place_objects(self):
-        pass
+        for i in self.OS.world['roads']:
+                x1 = self.OS.world['roads'][i].x1*(self.width-100)
+                y1 = self.OS.world['roads'][i].y1*self.height
+                x2 = self.OS.world['roads'][i].x2*(self.width-100)
+                y2 = self.OS.world['roads'][i].y2*self.height
+                self.map.create_line(x1, y1, x2, y2, fill="blue", width=len(self.OS.world['roads'][i].trailers))
 
-    def clear_objects(self):
-        pass
+        for i in self.OS.world['hubs']:
+            size = (len(self.OS.world['hubs'][i].cargo) + 3)/2
+            x = self.OS.world['hubs'][i].x*(self.width-100)
+            y = self.OS.world['hubs'][i].y*self.height
+            self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red",width=len(self.OS.world['hubs'][i].deliveredBin))
+            self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][i]))
 
 GUI()
