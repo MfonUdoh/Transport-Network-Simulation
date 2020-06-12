@@ -36,8 +36,8 @@ class Controller(object):
                 self.world['hubs'][min[1]].connections.append(hubA)
                 passes += 1
             
-            for e in connections:
-                self.world['hubs'][hubA].connections.append(e)
+            for node in connections:
+                self.world['hubs'][hubA].connections.append(node)
         
         for hub in self.world['hubs']:
             print(self.world['hubs'][hub].connections)

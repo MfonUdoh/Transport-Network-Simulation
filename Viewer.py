@@ -7,9 +7,11 @@ class GUI(tk.Frame):
         tk.Frame.__init__(self)
         self.grid()
         self.master.title("Transport Network")
+        self.width = 800
+        self.height = 500
 
-        self.columnconfigure(0, weight=1, minsize=800)
-        self.rowconfigure(1, weight=1, minsize=500)
+        self.columnconfigure(0, weight=1, minsize=self.width)
+        self.rowconfigure(1, weight=1, minsize=self.height)
 
         self.topBar = tk.Frame(
             self, bg="black"
@@ -25,17 +27,11 @@ class GUI(tk.Frame):
             self.mainWindow, bg="black"
         )
         self.sideBar.grid(row=0, column=0, sticky="ns")
-
-        self.map = tk.Frame(
-            self.mainWindow, bg="green"
-        )
-        self.map.grid(row=0, column=1, sticky="nsew")
-        # self.map.columnconfigure([x for x in range(10)], weight=1)
-        # self.map.rowconfigure([x for x in range(10)], weight=1)
+        self.clean_map()
 
         self.option_buttons()
         self.vars()
-        self.hubs = {}
+        self.OS = 0
 
         try:
             self.OS.sim()
@@ -43,6 +39,12 @@ class GUI(tk.Frame):
             pass
 
         self.mainloop()
+    
+    def clean_map(self):
+        self.map = tk.Canvas(
+            self.mainWindow, bg="green"
+        )
+        self.map.grid(row=0, column=1, sticky="nsew")
 
     def option_buttons(self):
         xPadding = 5
@@ -73,10 +75,8 @@ class GUI(tk.Frame):
             fg="white", bg="black", highlightbackground="black", command=self.reset_sim
             ).grid(row=0, column=4, padx=xPadding, pady=yPadding)
 
-        self.time = 0
-        time = tk.Label(
-            self.topBar, text=self.time, fg="white", bg="black"
-            ).grid(row=0, column=5, padx=xPadding, pady=yPadding)
+        self.time = tk.Label(self.topBar, text=0, fg="white", bg="black")
+        self.time.grid(row=0, column=5, padx=xPadding, pady=yPadding)
 
     def vars(self):
         self.vars = {}
@@ -143,16 +143,20 @@ class GUI(tk.Frame):
             i += 1
 
     def start_sim(self):
-        if self.hubs == {}:
+        if self.OS == 0:
             self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']))
             for i in self.OS.world['hubs']:
-                size = len(self.OS.world['hubs'][i].cargo) + 5
-                self.hubs[i] = tk.Frame(self.map, bg="blue",width=size, height=size)
-                self.hubs[i].place(relx=self.OS.world['hubs'][i].y, rely=self.OS.world['hubs'][i].x)
-                tk.Label(self.hubs[i], text=str(self.OS.world['hubs'][i])[-1]).pack()
+                size = (len(self.OS.world['hubs'][i].cargo) + 3)/2
+                x = self.OS.world['hubs'][i].x*(self.width-100)
+                y = self.OS.world['hubs'][i].y*self.height
+                self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red",width=2)
+                # self.hubs[i] = tk.Frame(self.map, bg="blue",width=size, height=size)
+                # self.hubs[i].place(relx=self.OS.world['hubs'][i].y, rely=self.OS.world['hubs'][i].x)
+                # tk.Label(self.hubs[i], text=str(self.OS.world['hubs'][i])[-1]).pack()
             self.run = True
             while self.OS.time < int(self.vars["time"]) and self.run:
                 self.OS.sim()
+                self.time['text'] = self.OS.time
                 self.update_idletasks()
                 self.update()
 
@@ -160,9 +164,9 @@ class GUI(tk.Frame):
         self.run = False
 
     def reset_sim(self):
-        for i in self.hubs:
-            self.hubs[i].place_forget()
-        self.hubs = {}
+        self.clean_map()
+        self.OS = 0
+        self.time['text'] = 0
         self.update_idletasks()
 
     def place_objects(self):
