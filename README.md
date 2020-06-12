@@ -40,6 +40,6 @@ There are several economic and operational reasons why the centralised approach 
 
 3. Run the main file
 
-    `python3 main.py`
+    `python3 Viewer.py`
 
 The program will generate text files filled with the generated data along with the visual representation.
