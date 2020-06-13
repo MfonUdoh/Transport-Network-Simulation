@@ -34,11 +34,6 @@ class GUI(tk.Frame):
         self.vars()
         self.OS = 0
 
-        try:
-            self.OS.sim()
-        except:
-            pass
-
         self.mainloop()
     
     def clean_map(self):
@@ -83,9 +78,10 @@ class GUI(tk.Frame):
         self.vars = {}
         vars = {
             "time"  :   ["Time", 5000],
-            "hub"   :   ["Hubs", 9],
+            "speed" :   ["Speed", 1],
+            "hub"   :   ["Hubs", 10],
             "dep"   :   ["Depots", 5],
-            "con"   :   ["Consignments", 25]
+            "con"   :   ["Consignments", 40]
         }
 
         def var_hub(vars, var, row):
@@ -120,6 +116,7 @@ class GUI(tk.Frame):
             def increment(var, inc):
                 vars = {
                 "time"  :   [1000, 10000, 1000],
+                "speed" :   [1, 5, 1],
                 "hub"   :   [2, 15, 1],
                 "dep"   :   [1, 10, 1],
                 "con"   :   [1, 75, 5]
@@ -145,7 +142,7 @@ class GUI(tk.Frame):
 
     def start_sim(self):
         if self.OS == 0:
-            self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']))
+            self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']), int(self.vars['speed']))
             self.place_objects()
             self.run = True
             while self.OS.time < int(self.vars["time"]) and self.run:

@@ -1,16 +1,16 @@
 import json, random, numpy, Trailer, Hub, Consignment, Road
 
 class Controller(object):
-    def __init__(self, num_hubs, num_deps, num_cons):
+    def __init__(self, num_hubs, num_deps, num_cons, speed):
         self.world = {
             'hubs'    :   {},
             'roads'   :   {}
         }
         self.time = 0
-        self.create_hubs(num_hubs)
+        self.create_hubs(num_hubs, speed)
         self.create_cons(num_cons)
 
-    def create_hubs(self, num_hubs):
+    def create_hubs(self, num_hubs, speed):
         for hub in ['hub{}'.format(x) for x in range(num_hubs)]:
             self.world['hubs'][hub] = Hub.Hub(hub)
             self.world['hubs'][hub].x = random.random()
@@ -46,7 +46,7 @@ class Controller(object):
                 x2 = self.world['hubs'][hubB].x
                 y2 = self.world['hubs'][hubB].y
         
-                self.world['hubs'][hubA].roads[hubB] = Road.Road('{}:{}'.format(hubA, hubB), x1, y1, x2, y2)
+                self.world['hubs'][hubA].roads[hubB] = Road.Road('{}:{}'.format(hubA, hubB), x1, y1, x2, y2, speed)
                 self.world['hubs'][hubA].park['Trailer{}:{}'.format(hubA, hubB)] = Trailer.Trailer(self.world['hubs'][hubA], self.world['hubs'][hubB])
 
     def create_cons(self, num_cons):
@@ -108,9 +108,11 @@ class Controller(object):
             path.reverse()
 
             return path, pathdistance
-
-        consignment.path, consignment.pathDistance = dijkstra(self.world['hubs'], str(consignment.origin), str(consignment.destination))
-        consignment.update_journey(str(consignment.origin))
+        try:
+            consignment.path, consignment.pathDistance = dijkstra(self.world['hubs'], str(consignment.origin), str(consignment.destination))
+            consignment.update_journey(str(consignment.origin))
+        except:
+            pass
 
     def load_trailers(self):
         for hub in self.world['hubs']:
