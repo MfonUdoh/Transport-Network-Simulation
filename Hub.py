@@ -28,7 +28,7 @@ class Hub(object):
                     self.unloadingBay[trailer].cargo.pop(0)
     
     def load(self):
-        loadCapacity = 2
+        loadCapacity = 1
         i = 1
         while i <= loadCapacity and not self.empty():
             i += 1

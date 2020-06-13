@@ -46,8 +46,7 @@ class Controller(object):
                 x2 = self.world['hubs'][hubB].x
                 y2 = self.world['hubs'][hubB].y
         
-                self.world['roads']['{}:{}'.format(hubA, hubB)] = Road.Road('{}:{}'.format(hubA, hubB), x1, y1, x2, y2)
-                self.world['hubs'][hubA].roads[hubB] = self.world['roads']['{}:{}'.format(hubA, hubB)]
+                self.world['hubs'][hubA].roads[hubB] = Road.Road('{}:{}'.format(hubA, hubB), x1, y1, x2, y2)
                 self.world['hubs'][hubA].park['Trailer{}:{}'.format(hubA, hubB)] = Trailer.Trailer(self.world['hubs'][hubA], self.world['hubs'][hubB])
 
     def create_cons(self, num_cons):
@@ -126,8 +125,9 @@ class Controller(object):
             self.world['hubs'][hub].unload()
             self.world['hubs'][hub].load()
             self.world['hubs'][hub].launch(self.time)
-        for road in self.world['roads']:
-            self.world['roads'][road].arrive(self.time)
+            for road in self.world['hubs'][hub].roads:
+                self.world['hubs'][hub].roads[road].positions(self.time)
+                self.world['hubs'][hub].roads[road].arrive(self.time)
 
     def distance(self, x1, y1, x2, y2):
         return numpy.sqrt(abs(x1 - x2)**2 + abs(y1 - y2)**2)

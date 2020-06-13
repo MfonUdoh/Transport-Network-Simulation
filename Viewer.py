@@ -168,18 +168,23 @@ class GUI(tk.Frame):
         self.update_idletasks()
 
     def place_objects(self):
-        for i in self.OS.world['roads']:
-                x1 = self.OS.world['roads'][i].x1*(self.width-100)
-                y1 = self.OS.world['roads'][i].y1*self.height
-                x2 = self.OS.world['roads'][i].x2*(self.width-100)
-                y2 = self.OS.world['roads'][i].y2*self.height
-                self.map.create_line(x1, y1, x2, y2, fill="blue", width=len(self.OS.world['roads'][i].trailers))
-
-        for i in self.OS.world['hubs']:
-            size = (len(self.OS.world['hubs'][i].cargo) + 3)/2
-            x = self.OS.world['hubs'][i].x*(self.width-100)
-            y = self.OS.world['hubs'][i].y*self.height
-            self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red",width=len(self.OS.world['hubs'][i].deliveredBin))
-            self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][i]))
+        for hub in self.OS.world['hubs']:
+            for road in self.OS.world['hubs'][hub].roads:
+                x1 = self.OS.world['hubs'][hub].roads[road].x1*(self.width-100)
+                y1 = self.OS.world['hubs'][hub].roads[road].y1*self.height
+                x2 = self.OS.world['hubs'][hub].roads[road].x2*(self.width-100)
+                y2 = self.OS.world['hubs'][hub].roads[road].y2*self.height
+                self.map.create_line(x1, y1, x2, y2, fill="blue", width=len(self.OS.world['hubs'][hub].roads[road].trailers))
+                for trailer in self.OS.world['hubs'][hub].roads[road].trailers:
+                    x = trailer.x*(self.width-100)
+                    y = trailer.y*self.height
+                    self.map.create_oval(x, y, x+2, y+2, outline="black", fill="black", width=5)
+                    print(x)
+                    print(y)
+            size = (len(self.OS.world['hubs'][hub].cargo) + 3)/2
+            x = self.OS.world['hubs'][hub].x*(self.width-100)
+            y = self.OS.world['hubs'][hub].y*self.height
+            self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red",width=len(self.OS.world['hubs'][hub].deliveredBin))
+            self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][hub]))
 
 GUI()

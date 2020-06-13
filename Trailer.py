@@ -7,6 +7,8 @@ class Trailer(object):
         self.state = "waiting"
         self.destination = destination
         self.origin = origin
+        self.x = origin.x
+        self.y = origin.y
         self.capacity = 5
         self.cargo = []
         self.dep_time = -1
