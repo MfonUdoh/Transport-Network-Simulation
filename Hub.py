@@ -38,6 +38,7 @@ class Hub(object):
                     if choice.nextStop == self.loadingBay[trailer].destination.name:
                         self.loadingBay[trailer].cargo.append(choice)
                         self.cargo.remove(choice)
+                        break
 
 
     def shunt(self):
@@ -49,7 +50,7 @@ class Hub(object):
                 self.unloadingBay[trailer] = self.park[trailer]
                 self.park.pop(trailer)
                 break
-            elif self.park[trailer].origin == self and len(self.loadingBay) < 1:
+            elif self.park[trailer].origin == self:
                 self.loadingBay[trailer] = self.park[trailer]
                 self.park.pop(trailer)
                 break

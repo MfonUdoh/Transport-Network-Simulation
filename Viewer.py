@@ -1,6 +1,7 @@
 import tkinter as tk
 from Controller import Controller
 import time
+import csv
 
 class GUI(tk.Frame):
     def __init__(self):
@@ -57,7 +58,7 @@ class GUI(tk.Frame):
 
         btn_save = tk.Button(
             self.topBar, text="Save",
-            fg="white", bg="black", highlightbackground="black"
+            fg="white", bg="black", highlightbackground="black", command=self.save_data
             ).grid(row=0, column=1, padx=xPadding, pady=yPadding)
 
         btn_run = tk.Button(
@@ -154,8 +155,6 @@ class GUI(tk.Frame):
                 self.time['text'] = self.OS.time
                 self.update_idletasks()
                 self.update()
-            for hub in self.OS.world['hubs']:
-                print(len(self.OS.world['hubs'][hub].deliveredBin))
 
     def stop_sim(self):
         self.run = False
@@ -167,6 +166,22 @@ class GUI(tk.Frame):
         self.time['text'] = 0
         self.update_idletasks()
 
+    def save_data(self):
+        if self.OS != 0:
+            with open('simData.csv', mode='w') as simData:
+                wrt = csv.writer(simData, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                wrt.writerow(['Hub', 'Item', 'Origin', 'Destination', 'Extra'])
+                for hub in self.OS.world['hubs']:
+                    for trailer in self.OS.world['hubs'][hub].park:
+                        wrt.writerow([hub, trailer, self.OS.world['hubs'][hub].park[trailer].origin, self.OS.world['hubs'][hub].park[trailer].destination, len(self.OS.world['hubs'][hub].park[trailer].cargo), 'Parked'])
+                    for trailer in self.OS.world['hubs'][hub].loadingBay:
+                        wrt.writerow([hub, trailer, self.OS.world['hubs'][hub].loadingBay[trailer].origin, self.OS.world['hubs'][hub].loadingBay[trailer].destination, len(self.OS.world['hubs'][hub].loadingBay[trailer].cargo), 'Loading'])
+                    for trailer in self.OS.world['hubs'][hub].unloadingBay:
+                        wrt.writerow([hub, trailer, self.OS.world['hubs'][hub].unloadingBay[trailer].origin, self.OS.world['hubs'][hub].unloadingBay[trailer].destination, len(self.OS.world['hubs'][hub].unloadingBay[trailer].cargo), 'Unloading'])
+                    for package in self.OS.world['hubs'][hub].cargo:
+                        wrt.writerow([hub, package, package.origin, package.destination, package.path])
+
+
     def place_objects(self):
         for hub in self.OS.world['hubs']:
             for road in self.OS.world['hubs'][hub].roads:
@@ -174,17 +189,18 @@ class GUI(tk.Frame):
                 y1 = self.OS.world['hubs'][hub].roads[road].y1*self.height
                 x2 = self.OS.world['hubs'][hub].roads[road].x2*(self.width-100)
                 y2 = self.OS.world['hubs'][hub].roads[road].y2*self.height
-                self.map.create_line(x1, y1, x2, y2, fill="blue", width=len(self.OS.world['hubs'][hub].roads[road].trailers))
+                self.map.create_line(x1, y1, x2, y2, fill="blue", width=len(self.OS.world['hubs'][hub].roads[road].trailers)*2)
+        for hub in self.OS.world['hubs']:
+            for road in self.OS.world['hubs'][hub].roads:
                 for trailer in self.OS.world['hubs'][hub].roads[road].trailers:
                     x = trailer.x*(self.width-100)
                     y = trailer.y*self.height
-                    self.map.create_oval(x, y, x+2, y+2, outline="black", fill="black", width=5)
-                    print(x)
-                    print(y)
+                    self.map.create_oval(x-1, y-1, x+1, y+1, outline="black", fill="black", width=5)
+        for hub in self.OS.world['hubs']:
             size = (len(self.OS.world['hubs'][hub].cargo) + 3)/2
             x = self.OS.world['hubs'][hub].x*(self.width-100)
             y = self.OS.world['hubs'][hub].y*self.height
             self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red",width=len(self.OS.world['hubs'][hub].deliveredBin))
-            self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][hub]))
+            self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][hub])) 
 
 GUI()
