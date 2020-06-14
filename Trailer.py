@@ -12,6 +12,7 @@ class Trailer(object):
         self.capacity = 5
         self.cargo = []
         self.dep_time = -1
+        self.prev_time = -1
         self.arr_time = 0
         self.load_count = 0
         self.load_time = 2

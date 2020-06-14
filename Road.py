@@ -15,11 +15,14 @@ class Road(object):
 
     def positions(self, now):
         for trailer in self.trailers:
-            amount_completed = (now - trailer.dep_time)/(self.time_length)
+            if trailer.prev_time == -1:
+                trailer.prev_time = trailer.dep_time
+            amount_completed = (now - trailer.prev_time)/(self.time_length)
+            trailer.prev_time = now
             dx = self.x2 - self.x1
             dy = self.y2 - self.y1
-            trailer.x = self.x1 + dx * amount_completed
-            trailer.y = self.y1 + dy * amount_completed
+            trailer.x = dx * amount_completed
+            trailer.y = dy * amount_completed
 
     def arrive(self, now):
         check = True
@@ -29,6 +32,7 @@ class Road(object):
                 if trailer.dep_time + self.time_length <= now:
                     trailer.x = trailer.destination.x
                     trailer.y = trailer.destination.y
+                    trailer.prev_time = -1
                     trailer.destination.park[trailer] = trailer
                     self.trailers.remove(trailer)
                     check = True

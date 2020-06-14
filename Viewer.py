@@ -33,14 +33,23 @@ class GUI(tk.Frame):
         self.option_buttons()
         self.vars()
         self.OS = 0
+        self.objects = {
+            'hubs'  :   {},
+            'trailers'  :   {},
+            'roads'     :   {}
+        }
+        self.start_sim()
 
         self.mainloop()
     
     def clean_map(self):
-        self.map = tk.Canvas(
-            self.mainWindow, bg="green"
-        )
-        self.map.grid(row=0, column=1, sticky="nsew")
+        try:
+            self.map.delete(ALL)
+        except:
+            self.map = tk.Canvas(
+                self.mainWindow, bg="green"
+            )
+            self.map.grid(row=0, column=1, sticky="nsew")
 
     def option_buttons(self):
         xPadding = 5
@@ -56,23 +65,30 @@ class GUI(tk.Frame):
             fg="white", bg="black", highlightbackground="black", command=self.save_data
             ).grid(row=0, column=1, padx=xPadding, pady=yPadding)
 
+        btn_create = tk.Button(
+            self.topBar, text="Create",
+            fg="white", bg="black", highlightbackground="black", command=self.create_sim
+            ).grid(row=0, column=2, padx=xPadding, pady=yPadding)
+
         btn_run = tk.Button(
             self.topBar, text="Run", 
             fg="white", bg="black", highlightbackground="black", command=self.start_sim
-            ).grid(row=0, column=2, padx=xPadding, pady=yPadding)
+            ).grid(row=0, column=3, padx=xPadding, pady=yPadding)
 
         btn_stop = tk.Button(
             self.topBar, text="Stop", 
             fg="white", bg="black", highlightbackground="black", command=self.stop_sim
-            ).grid(row=0, column=3, padx=xPadding, pady=yPadding)
+            ).grid(row=0, column=4, padx=xPadding, pady=yPadding)
 
         btn_reset = tk.Button(
             self.topBar, text="Reset", 
             fg="white", bg="black", highlightbackground="black", command=self.reset_sim
-            ).grid(row=0, column=4, padx=xPadding, pady=yPadding)
+            ).grid(row=0, column=5, padx=xPadding, pady=yPadding)
 
+        self.time_lbl = tk.Label(self.topBar, text='Time:', fg="white", bg="black")
+        self.time_lbl.grid(row=0, column=6, padx=xPadding, pady=yPadding)
         self.time = tk.Label(self.topBar, text=0, fg="white", bg="black")
-        self.time.grid(row=0, column=5, padx=xPadding, pady=yPadding)
+        self.time.grid(row=0, column=7, padx=xPadding, pady=yPadding)
 
     def vars(self):
         self.vars = {}
@@ -140,18 +156,22 @@ class GUI(tk.Frame):
             var_hub(vars, v, i)
             i += 1
 
+    def create_sim(self):
+        self.reset_sim()
+        self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']), int(self.vars['speed']))
+        self.place_objects()
+        self.run = True
+
     def start_sim(self):
-        if self.OS == 0:
-            self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']), int(self.vars['speed']))
-            self.place_objects()
-            self.run = True
-            while self.OS.time < int(self.vars["time"]) and self.run:
-                self.clean_map()
-                self.place_objects()
-                self.OS.sim()
-                self.time['text'] = self.OS.time
-                self.update_idletasks()
-                self.update()
+        if self.OS != 0:
+            self.sim_update()
+
+    def sim_update(self):
+        if self.OS.time < int(self.vars["time"]) and self.run:
+            self.OS.sim()
+            self.update_objects()
+            self.after(15, self.sim_update)
+            self.time['text'] = self.OS.time
 
     def stop_sim(self):
         self.run = False
@@ -186,18 +206,31 @@ class GUI(tk.Frame):
                 y1 = self.OS.world['hubs'][hub].roads[road].y1*self.height
                 x2 = self.OS.world['hubs'][hub].roads[road].x2*(self.width-100)
                 y2 = self.OS.world['hubs'][hub].roads[road].y2*self.height
-                self.map.create_line(x1, y1, x2, y2, fill="blue", width=len(self.OS.world['hubs'][hub].roads[road].trailers)*2)
+                self.objects['roads']["{}:{}".format(hub,road)] = self.map.create_line(x1, y1, x2, y2, fill="blue", width=1)
         for hub in self.OS.world['hubs']:
-            for road in self.OS.world['hubs'][hub].roads:
-                for trailer in self.OS.world['hubs'][hub].roads[road].trailers:
-                    x = trailer.x*(self.width-100)
-                    y = trailer.y*self.height
-                    self.map.create_oval(x-1, y-1, x+1, y+1, outline="black", fill="black", width=5)
+            for trailer in self.OS.world['hubs'][hub].park:
+                x = self.OS.world['hubs'][hub].park[trailer].x*(self.width-100)
+                y = self.OS.world['hubs'][hub].park[trailer].y*self.height
+                self.objects['trailers'][trailer] = self.map.create_oval(x-1, y-1, x+1, y+1, outline="black", fill="black", width=5)
         for hub in self.OS.world['hubs']:
             size = (len(self.OS.world['hubs'][hub].cargo) + 3)/2
             x = self.OS.world['hubs'][hub].x*(self.width-100)
             y = self.OS.world['hubs'][hub].y*self.height
-            self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red",width=len(self.OS.world['hubs'][hub].deliveredBin))
+            self.objects['hubs'][hub] = self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red", width=0)
             self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][hub])) 
+
+    def update_objects(self):
+        for hub in self.OS.world['hubs']:
+            size = (len(self.OS.world['hubs'][hub].cargo) + 3)/2
+            x = self.OS.world['hubs'][hub].x*(self.width-100)
+            y = self.OS.world['hubs'][hub].y*self.height
+            self.map.coords(self.objects['hubs'][hub], x-size, y+size, x+size, y-size)
+            self.map.itemconfig(self.objects['hubs'][hub], width=len(self.OS.world['hubs'][hub].deliveredBin))
+            for road in self.OS.world['hubs'][hub].roads:
+                self.map.itemconfig(self.objects['roads']["{}:{}".format(hub,road)], width=len(self.OS.world['hubs'][hub].roads[road].trailers)*2)
+                for trailer in self.OS.world['hubs'][hub].roads[road].trailers:
+                    x = trailer.x*(self.width-100)
+                    y = trailer.y*self.height
+                    self.map.move(self.objects['trailers'][trailer.name], x, y)
 
 GUI()
