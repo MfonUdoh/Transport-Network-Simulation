@@ -1,7 +1,6 @@
 import tkinter as tk
 from Controller import Controller
-import time
-import csv
+import csv, os
 
 class GUI(tk.Frame):
     def __init__(self):
@@ -191,7 +190,7 @@ class GUI(tk.Frame):
 
     def save_data(self):
         if self.OS != 0:
-            with open('simData.csv', mode='w') as simData:
+            with open(os.path.expanduser('~/Desktop/simData.csv'), mode='w') as simData:
                 wrt = csv.writer(simData, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 wrt.writerow(['Hub', 'Item', 'Origin', 'Destination', 'Extra'])
                 for hub in self.OS.world['hubs']:

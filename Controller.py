@@ -1,4 +1,5 @@
-import json, random, numpy, Trailer, Hub, Consignment, Road
+import random, Trailer, Hub, Consignment, Road
+from math import sqrt
 
 class Controller(object):
     def __init__(self, num_hubs, num_deps, num_cons, speed):
@@ -131,4 +132,4 @@ class Controller(object):
                 self.world['hubs'][hub].roads[road].arrive(self.time)
 
     def distance(self, x1, y1, x2, y2):
-        return numpy.sqrt(abs(x1 - x2)**2 + abs(y1 - y2)**2)
+        return sqrt(abs(x1 - x2)**2 + abs(y1 - y2)**2)

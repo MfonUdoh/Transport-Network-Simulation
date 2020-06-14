@@ -1,4 +1,4 @@
-import numpy
+from math import sqrt
 class Road(object):
     def __init__(self, name, x1, y1, x2, y2, speed):
         self.name = name
@@ -7,7 +7,7 @@ class Road(object):
         self.x2 = x2
         self.y2 = y2
         self.trailers = []
-        self.length = numpy.sqrt(abs(x1 - x2)**2 + abs(y1 - y2)**2)
+        self.length = sqrt(abs(x1 - x2)**2 + abs(y1 - y2)**2)
         self.time_length = self.length*1000/speed
 
     def __str__(self):
