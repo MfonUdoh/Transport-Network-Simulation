@@ -1,16 +1,16 @@
-import json, random, numpy, Trailer, Hub, Consignment, Road
+import random, Trailer, Hub, Consignment, Road
+from math import sqrt
 
 class Controller(object):
-    def __init__(self, num_hubs, num_deps, num_cons):
+    def __init__(self, num_hubs, num_deps, num_cons, speed):
         self.world = {
             'hubs'    :   {},
-            'roads'   :   {}
         }
         self.time = 0
-        self.create_hubs(num_hubs)
+        self.create_hubs(num_hubs, speed)
         self.create_cons(num_cons)
 
-    def create_hubs(self, num_hubs):
+    def create_hubs(self, num_hubs, speed):
         for hub in ['hub{}'.format(x) for x in range(num_hubs)]:
             self.world['hubs'][hub] = Hub.Hub(hub)
             self.world['hubs'][hub].x = random.random()
@@ -46,8 +46,8 @@ class Controller(object):
                 x2 = self.world['hubs'][hubB].x
                 y2 = self.world['hubs'][hubB].y
         
-                self.world['roads']['{}:{}'.format(hubA, hubB)] = Road.Road('{}:{}'.format(hubA, hubB), x1, y1, x2, y2)
-                self.world['hubs'][hubA].park['Trailer{}:{}'.format(hubA, hubB)] = Trailer.Trailer('Trailer{}:{}'.format(hubA, hubB))
+                self.world['hubs'][hubA].roads[hubB] = Road.Road('{}:{}'.format(hubA, hubB), x1, y1, x2, y2, speed)
+                self.world['hubs'][hubA].park['Trailer{}:{}'.format(hubA, hubB)] = Trailer.Trailer(self.world['hubs'][hubA], self.world['hubs'][hubB])
 
     def create_cons(self, num_cons):
         cons = ['con{}'.format(x) for x in range(num_cons*len(self.world['hubs']))]
@@ -108,9 +108,11 @@ class Controller(object):
             path.reverse()
 
             return path, pathdistance
-
-        consignment.path, consignment.pathDistance = dijkstra(self.world['hubs'], str(consignment.origin), str(consignment.destination))
-        consignment.update_journey(str(consignment.origin))
+        try:
+            consignment.path, consignment.pathDistance = dijkstra(self.world['hubs'], str(consignment.origin), str(consignment.destination))
+            consignment.update_journey(str(consignment.origin))
+        except:
+            pass
 
     def load_trailers(self):
         for hub in self.world['hubs']:
@@ -120,80 +122,14 @@ class Controller(object):
 
     def sim(self):
         self.time += 1
+        for hub in self.world['hubs']:
+            self.world['hubs'][hub].shunt()
+            self.world['hubs'][hub].unload()
+            self.world['hubs'][hub].load()
+            self.world['hubs'][hub].launch(self.time)
+            for road in self.world['hubs'][hub].roads:
+                self.world['hubs'][hub].roads[road].positions(self.time)
+                self.world['hubs'][hub].roads[road].arrive(self.time)
 
     def distance(self, x1, y1, x2, y2):
-        return numpy.sqrt(abs(x1 - x2)**2 + abs(y1 - y2)**2)
-
-# time = 1
-# trailers = ['tnt{}'.format(x) for x in range(15)]
-# cons = ['con{}'.format(x) for x in range(750)]
-# hubs = ['ath', 'kin', 'lount']
-# places = []
-
-# # Builds hubs
-# for hub in hubs:
-#     places.append(Hub.Hub(hub))
-
-# # Builds roads between all the hubs
-# for i in range(len(places)):
-#     for j in range(len(places)):
-#         if i != j:
-#             places[i].roads.append(Road.Road('{}:{}'.format(places[i], places[j])))
-
-# # Make trailers
-# for trailer in trailers:
-#     choice = random.choice([*places])
-#     choice.trailers.append(Trailer.Trailer(trailer))
-    
-#     choice.trailers[-1].origin = choice
-#     choice2 = choice
-#     while choice == choice2:
-#         choice2 = random.choice([*places])
-#         choice.trailers[-1].destination = choice2
-
-# # Make consignments
-# for con in cons:
-#     choice = random.choice([*places])
-#     choice.cargo.append(Consignment.Consignment(con))
-    
-#     choice.cargo[-1].origin = choice
-#     choice2 = choice
-#     while choice == choice2:
-#         choice2 = random.choice([*places])
-#         choice.cargo[-1].destination = choice2
-
-# run = True
-# with open('manifest.txt', 'w') as text_file:
-#     while run:
-#         for hub in places:
-#             hub.send(time)
-#         for hub in places:
-#             hub.receive(time)
-
-#         time += 1
-#         if time % 10 == 0:
-#             print("""
-
-
-# Time: {}""".format(time), file=text_file)
-#             for hub in places:
-#                 print('{}: {}'.format(hub.name, len(hub.cargo)), file=text_file)
-#                 for trailer in range(len(hub.trailers)):
-#                     print(hub.trailers[trailer].define(), file=text_file)
-#                 for i in range(len(hub.roads)):
-#                     print('Road {}'.format(hub.roads[i]), file=text_file)
-#                     for j in range(len(hub.roads[i].trailers)):
-#                         print(hub.roads[i].trailers[j].define(), file=text_file)
-#                 print("", file=text_file)
-    
-#         # Stops the loop when all has arrived
-#         if time == 2000:
-#             run = False
-    
-# for hub in places:
-#     hub.check()
-#     print("")
-#     print(hub.name)
-#     for trailer in hub.trailers:
-#         if trailer.dep_time == -1:
-#             print(trailer.define())
+        return sqrt(abs(x1 - x2)**2 + abs(y1 - y2)**2)

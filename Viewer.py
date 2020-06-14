@@ -1,6 +1,6 @@
 import tkinter as tk
 from Controller import Controller
-import time
+import csv, os
 
 class GUI(tk.Frame):
     def __init__(self):
@@ -32,19 +32,23 @@ class GUI(tk.Frame):
         self.option_buttons()
         self.vars()
         self.OS = 0
-
-        try:
-            self.OS.sim()
-        except:
-            pass
+        self.objects = {
+            'hubs'  :   {},
+            'trailers'  :   {},
+            'roads'     :   {}
+        }
+        self.start_sim()
 
         self.mainloop()
     
     def clean_map(self):
-        self.map = tk.Canvas(
-            self.mainWindow, bg="green"
-        )
-        self.map.grid(row=0, column=1, sticky="nsew")
+        try:
+            self.map.delete(ALL)
+        except:
+            self.map = tk.Canvas(
+                self.mainWindow, bg="green"
+            )
+            self.map.grid(row=0, column=1, sticky="nsew")
 
     def option_buttons(self):
         xPadding = 5
@@ -57,34 +61,45 @@ class GUI(tk.Frame):
 
         btn_save = tk.Button(
             self.topBar, text="Save",
-            fg="white", bg="black", highlightbackground="black"
+            fg="white", bg="black", highlightbackground="black", command=self.save_data
             ).grid(row=0, column=1, padx=xPadding, pady=yPadding)
+
+        btn_create = tk.Button(
+            self.topBar, text="Create",
+            fg="white", bg="black", highlightbackground="black", command=self.create_sim
+            ).grid(row=0, column=2, padx=xPadding, pady=yPadding)
 
         btn_run = tk.Button(
             self.topBar, text="Run", 
             fg="white", bg="black", highlightbackground="black", command=self.start_sim
-            ).grid(row=0, column=2, padx=xPadding, pady=yPadding)
+            ).grid(row=0, column=3, padx=xPadding, pady=yPadding)
 
         btn_stop = tk.Button(
             self.topBar, text="Stop", 
             fg="white", bg="black", highlightbackground="black", command=self.stop_sim
-            ).grid(row=0, column=3, padx=xPadding, pady=yPadding)
+            ).grid(row=0, column=4, padx=xPadding, pady=yPadding)
 
         btn_reset = tk.Button(
             self.topBar, text="Reset", 
             fg="white", bg="black", highlightbackground="black", command=self.reset_sim
-            ).grid(row=0, column=4, padx=xPadding, pady=yPadding)
+            ).grid(row=0, column=5, padx=xPadding, pady=yPadding)
 
+        self.time_lbl = tk.Label(self.topBar, text='Time:', fg="white", bg="black")
+        self.time_lbl.grid(row=0, column=6, padx=xPadding, pady=yPadding)
         self.time = tk.Label(self.topBar, text=0, fg="white", bg="black")
-        self.time.grid(row=0, column=5, padx=xPadding, pady=yPadding)
+        self.time.grid(row=0, column=7, padx=xPadding, pady=yPadding)
+
+        self.complete = tk.Label(self.topBar, text="", fg="white", bg="black")
+        self.complete.grid(row=0, column=8, padx=xPadding, pady=yPadding)
 
     def vars(self):
         self.vars = {}
         vars = {
             "time"  :   ["Time", 5000],
-            "hub"   :   ["Hubs", 9],
+            "speed" :   ["Speed", 3],
+            "hub"   :   ["Hubs", 10],
             "dep"   :   ["Depots", 5],
-            "con"   :   ["Consignments", 25]
+            "con"   :   ["Consignments", 40]
         }
 
         def var_hub(vars, var, row):
@@ -119,7 +134,8 @@ class GUI(tk.Frame):
             def increment(var, inc):
                 vars = {
                 "time"  :   [1000, 10000, 1000],
-                "hub"   :   [2, 15, 1],
+                "speed" :   [1, 5, 1],
+                "hub"   :   [2, 20, 1],
                 "dep"   :   [1, 10, 1],
                 "con"   :   [1, 75, 5]
                 }
@@ -142,46 +158,84 @@ class GUI(tk.Frame):
             var_hub(vars, v, i)
             i += 1
 
-    def start_sim(self):
-        if self.OS == 0:
-            self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']))
-            
-            for i in self.OS.world['roads']:
-                x1 = self.OS.world['roads'][i].x1*(self.width-100)
-                y1 = self.OS.world['roads'][i].y1*self.height
-                x2 = self.OS.world['roads'][i].x2*(self.width-100)
-                y2 = self.OS.world['roads'][i].y2*self.height
-                self.map.create_line(x1, y1, x2, y2, fill="blue", width=2)
+    def create_sim(self):
+        self.reset_sim()
+        self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']), int(self.vars['speed']))
+        self.place_objects()
 
-            for i in self.OS.world['hubs']:
-                size = (len(self.OS.world['hubs'][i].cargo) + 3)/2
-                x = self.OS.world['hubs'][i].x*(self.width-100)
-                y = self.OS.world['hubs'][i].y*self.height
-                self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red",width=2)
-                self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][i]))
-                # self.hubs[i] = tk.Frame(self.map, bg="blue",width=size, height=size)
-                # self.hubs[i].place(relx=self.OS.world['hubs'][i].y, rely=self.OS.world['hubs'][i].x)
-                # tk.Label(self.hubs[i], text=str(self.OS.world['hubs'][i])[-1]).pack()
+    def start_sim(self):
+        if self.OS != 0and not self.run:
             self.run = True
-            while self.OS.time < int(self.vars["time"]) and self.run:
-                self.OS.sim()
-                self.time['text'] = self.OS.time
-                self.update_idletasks()
-                self.update()
+            self.sim_update()
+
+    def sim_update(self):
+        if self.OS.time < int(self.vars["time"]) and self.run:
+            self.OS.sim()
+            self.update_objects()
+            self.after(15, self.sim_update)
+            self.time['text'] = self.OS.time
+            if all([self.OS.world['hubs'][hub].empty() for hub in self.OS.world['hubs']]):
+                self.complete['text'] = "Finished!"
 
     def stop_sim(self):
         self.run = False
 
     def reset_sim(self):
+        self.stop_sim()
         self.clean_map()
         self.OS = 0
         self.time['text'] = 0
+        self.complete['text'] = ""
         self.update_idletasks()
 
-    def place_objects(self):
-        pass
+    def save_data(self):
+        if self.OS != 0:
+            with open(os.path.expanduser('~/Desktop/simData.csv'), mode='w') as simData:
+                wrt = csv.writer(simData, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                wrt.writerow(['Hub', 'Item', 'Origin', 'Destination', 'Extra'])
+                for hub in self.OS.world['hubs']:
+                    for trailer in self.OS.world['hubs'][hub].park:
+                        wrt.writerow([hub, trailer, self.OS.world['hubs'][hub].park[trailer].origin, self.OS.world['hubs'][hub].park[trailer].destination, len(self.OS.world['hubs'][hub].park[trailer].cargo), 'Parked'])
+                    for trailer in self.OS.world['hubs'][hub].loadingBay:
+                        wrt.writerow([hub, trailer, self.OS.world['hubs'][hub].loadingBay[trailer].origin, self.OS.world['hubs'][hub].loadingBay[trailer].destination, len(self.OS.world['hubs'][hub].loadingBay[trailer].cargo), 'Loading'])
+                    for trailer in self.OS.world['hubs'][hub].unloadingBay:
+                        wrt.writerow([hub, trailer, self.OS.world['hubs'][hub].unloadingBay[trailer].origin, self.OS.world['hubs'][hub].unloadingBay[trailer].destination, len(self.OS.world['hubs'][hub].unloadingBay[trailer].cargo), 'Unloading'])
+                    for package in self.OS.world['hubs'][hub].cargo:
+                        wrt.writerow([hub, package, package.origin, package.destination, package.path])
 
-    def clear_objects(self):
-        pass
+
+    def place_objects(self):
+        for hub in self.OS.world['hubs']:
+            for road in self.OS.world['hubs'][hub].roads:
+                x1 = self.OS.world['hubs'][hub].roads[road].x1*(self.width-100)
+                y1 = self.OS.world['hubs'][hub].roads[road].y1*self.height
+                x2 = self.OS.world['hubs'][hub].roads[road].x2*(self.width-100)
+                y2 = self.OS.world['hubs'][hub].roads[road].y2*self.height
+                self.objects['roads']["{}:{}".format(hub,road)] = self.map.create_line(x1, y1, x2, y2, fill="blue", width=1)
+        for hub in self.OS.world['hubs']:
+            for trailer in self.OS.world['hubs'][hub].park:
+                x = self.OS.world['hubs'][hub].park[trailer].x*(self.width-100)
+                y = self.OS.world['hubs'][hub].park[trailer].y*self.height
+                self.objects['trailers'][trailer] = self.map.create_oval(x-1, y-1, x+1, y+1, outline="black", fill="black", width=5)
+        for hub in self.OS.world['hubs']:
+            size = (len(self.OS.world['hubs'][hub].cargo) + 3)/2
+            x = self.OS.world['hubs'][hub].x*(self.width-100)
+            y = self.OS.world['hubs'][hub].y*self.height
+            self.objects['hubs'][hub] = self.map.create_rectangle(x-size, y+size, x+size, y-size, outline="blue", fill="red", width=0)
+            self.map.create_text(x, y, fill="white", text=str(self.OS.world['hubs'][hub])) 
+
+    def update_objects(self):
+        for hub in self.OS.world['hubs']:
+            size = (len(self.OS.world['hubs'][hub].cargo) + 3)/2
+            x = self.OS.world['hubs'][hub].x*(self.width-100)
+            y = self.OS.world['hubs'][hub].y*self.height
+            self.map.coords(self.objects['hubs'][hub], x-size, y+size, x+size, y-size)
+            self.map.itemconfig(self.objects['hubs'][hub], width=len(self.OS.world['hubs'][hub].deliveredBin))
+            for road in self.OS.world['hubs'][hub].roads:
+                self.map.itemconfig(self.objects['roads']["{}:{}".format(hub,road)], width=len(self.OS.world['hubs'][hub].roads[road].trailers)*2)
+                for trailer in self.OS.world['hubs'][hub].roads[road].trailers:
+                    x = trailer.x*(self.width-100)
+                    y = trailer.y*self.height
+                    self.map.move(self.objects['trailers'][trailer.name], x, y)
 
 GUI()
