@@ -90,11 +90,14 @@ class GUI(tk.Frame):
         self.time = tk.Label(self.topBar, text=0, fg="white", bg="black")
         self.time.grid(row=0, column=7, padx=xPadding, pady=yPadding)
 
+        self.complete = tk.Label(self.topBar, text="", fg="white", bg="black")
+        self.complete.grid(row=0, column=8, padx=xPadding, pady=yPadding)
+
     def vars(self):
         self.vars = {}
         vars = {
             "time"  :   ["Time", 5000],
-            "speed" :   ["Speed", 1],
+            "speed" :   ["Speed", 3],
             "hub"   :   ["Hubs", 10],
             "dep"   :   ["Depots", 5],
             "con"   :   ["Consignments", 40]
@@ -133,7 +136,7 @@ class GUI(tk.Frame):
                 vars = {
                 "time"  :   [1000, 10000, 1000],
                 "speed" :   [1, 5, 1],
-                "hub"   :   [2, 15, 1],
+                "hub"   :   [2, 20, 1],
                 "dep"   :   [1, 10, 1],
                 "con"   :   [1, 75, 5]
                 }
@@ -160,10 +163,10 @@ class GUI(tk.Frame):
         self.reset_sim()
         self.OS = Controller(int(self.vars['hub']), int(self.vars['dep']), int(self.vars['con']), int(self.vars['speed']))
         self.place_objects()
-        self.run = True
 
     def start_sim(self):
-        if self.OS != 0:
+        if self.OS != 0and not self.run:
+            self.run = True
             self.sim_update()
 
     def sim_update(self):
@@ -172,6 +175,8 @@ class GUI(tk.Frame):
             self.update_objects()
             self.after(15, self.sim_update)
             self.time['text'] = self.OS.time
+            if all([self.OS.world['hubs'][hub].empty() for hub in self.OS.world['hubs']]):
+                self.complete['text'] = "Finished!"
 
     def stop_sim(self):
         self.run = False
@@ -181,6 +186,7 @@ class GUI(tk.Frame):
         self.clean_map()
         self.OS = 0
         self.time['text'] = 0
+        self.complete['text'] = ""
         self.update_idletasks()
 
     def save_data(self):

@@ -12,7 +12,6 @@ class Trailer(object):
         self.cargo = []
         self.dep_time = -1
         self.prev_time = -1
-        self.clock = 0
 
     def __str__(self):
         return self.name

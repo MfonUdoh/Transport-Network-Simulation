@@ -26,10 +26,7 @@ class Hub(object):
                     self.unloadingBay[trailer].cargo.pop(0)
     
     def load(self):
-        loadCapacity = 1
-        i = 1
-        while i <= loadCapacity and not self.empty():
-            i += 1
+        if not self.empty():
             choice = random.choice(self.cargo)
             for trailer in self.loadingBay:
                 if not self.loadingBay[trailer].full():
@@ -48,7 +45,7 @@ class Hub(object):
                 self.unloadingBay[trailer] = self.park[trailer]
                 self.park.pop(trailer)
                 break
-            elif self.park[trailer].origin == self:
+            elif self.park[trailer].origin == self and (any([(con.nextStop == self.park[trailer].destination.name) for con in self.cargo]) or any([(con.nextStop == self.name) for con in self.park[trailer].destination.cargo])):
                 self.loadingBay[trailer] = self.park[trailer]
                 self.park.pop(trailer)
                 break
@@ -66,7 +63,7 @@ class Hub(object):
         """Launch trailers onto the road"""
 
         for trailer in self.loadingBay:
-            if self.loadingBay[trailer].full() or (not self.loadingBay[trailer].empty() and self.empty()):
+            if self.loadingBay[trailer].full() or (not self.loadingBay[trailer].empty() and not any([con.nextStop == self.loadingBay[trailer].destination.name for con in self.cargo])) or (not any([con.nextStop == self.loadingBay[trailer].destination.name for con in self.cargo]) and any([(con.nextStop == self.name) for con in self.loadingBay[trailer].destination.cargo])):
                 self.loadingBay[trailer].dep_time = now
                 self.roads[self.loadingBay[trailer].destination.name].trailers.append(self.loadingBay[trailer])
                 self.loadingBay.pop(trailer)
