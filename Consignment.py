@@ -12,9 +12,6 @@ class Consignment():
     def __str__(self):
         return self.name
 
-    def define(self):
-        return {'name': self.name, 'destination':self.destination.name, 'delivered': self.delivered}
-
     def update_journey(self, here):
         # Updates current stop and next stop given the current location in the path
         hereIndex = self.path.index(here)
