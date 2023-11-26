@@ -43,3 +43,6 @@ There are several economic and operational reasons why the centralised approach 
     `python3 Viewer.py`
 
 The program will generate text files filled with the generated data along with the visual representation.
+
+![Transport-Simulation](https://github.com/MfonUdoh/Transport-Network-Simulation/assets/48888128/e9cf4c32-8cc8-4f00-88ba-d03385693e40)
+
